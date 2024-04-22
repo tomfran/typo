@@ -1,0 +1,9 @@
+{{ $url := .Destination | safeURL }}
+
+{{/* Append class to figures based on ending -> #dark or #light */}}
+
+<figure {{ $file_name_array :=split $url "#" }} {{ $file_name_len :=len $file_name_array }} {{ if eq (index
+    $file_name_array (sub $file_name_len 1)) "dark" }} class="img-dark" {{ else if eq (index $file_name_array (sub
+    $file_name_len 1)) "light" }} class="img-light" {{end }}>
+    <img src="{{ $url }}">
+</figure>
