@@ -8,9 +8,9 @@
 
 **Article**
 
-![1](misc/2.png)
+![2](misc/2.png)
 
-![1](misc/3.png)
+![3](misc/3.png)
 
 
 ## Installation
@@ -22,10 +22,15 @@ git submodule add git@github.com:tomfran/typo.git themes/typo
 
 Otherwise you can clone the repo and copy it manually to yout theme folder.
 
-## Features
+## Peculiarities
 
-- Latex and code blocks overflow on mobile
-- Headers autonumbering
+**Latex and code overflow on mobile**
+
+...
+
+**Dark and Light mode tags for images**
+
+...
 
 ## Configuration example
 
@@ -109,7 +114,3 @@ url = "/resume"
 [markup.highlight]
 style = 'algol'
 ```
-
-## Future works
-
-- [ ] Dark mode
