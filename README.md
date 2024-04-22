@@ -22,9 +22,29 @@ git submodule add git@github.com:tomfran/typo.git themes/typo
 
 Otherwise you can clone the repo and copy it manually to yout theme folder.
 
+## Features
+
+- Latex and code blocks overflow on mobile
+- Headers autonumbering
+
 ## Configuration example
 
-Here is an example configuration:
+**post.md**
+
+```md
+---
+title: "Search Engine in Rust"
+date: "2024-02-01"
+summary: "A search engine overview and Rust implementation."
+toc: true 
+readTime: true
+autonumber: true
+---
+
+...
+```
+
+**hugo.toml**
 
 ```toml
 baseURL = 'https://example.org/'
@@ -93,4 +113,3 @@ style = 'algol'
 ## Future works
 
 - [ ] Dark mode
-- [ ] Headings auto-numbering
