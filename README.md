@@ -1,13 +1,16 @@
 ![banner](misc/readme.png)
 
-The theme is keeped as simple as possible on purpose. There are no fancy headers, cards, or stuff like that. 
-The fonts in use are Literata and Monaspace.
+# Typo, a Hugo theme.
 
-Tags are intentionally omitted, have a look at the sample coinfiguration at the bottom to remove them. 
+**Homepage**
 
-## Example website
+![1](misc/1.png)
 
+**Article**
 
+![1](misc/2.png)
+
+![1](misc/3.png)
 
 ## Installation
 
@@ -18,7 +21,7 @@ git submodule add git@github.com:tomfran/typo.git themes/typo
 
 Otherwise you can clone the repo and copy it manually to yout theme folder.
 
-## Configuration
+## Configuration example
 
 Here is an example configuration:
 
@@ -85,3 +88,5 @@ url = "/about"
 [markup.highlight]
 style = 'algol'
 ```
+
+Tags are intentionally omitted.
