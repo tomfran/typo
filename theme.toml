@@ -1,0 +1,14 @@
+name = 'Typo'
+license = 'MIT'
+licenselink = 'https://github.com/tomfran/typo/LICENSE'
+description = 'A simple Hugo theme'
+
+homepage = 'https://github.com/tomfran/typo'
+
+demosite = 'https://tomfran.github.io/'
+
+tags = ['blog']
+
+[author]
+name = 'Francesco Tomaselli'
+homepage = 'https://tomfran.github.io/'

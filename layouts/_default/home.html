@@ -1,0 +1,58 @@
+{{ define "main" }}
+
+{{ .Content }}
+
+{{/* Intro summary section */}}
+{{ if .Site.Params.homeIntro }}
+
+<div class="intro">
+    {{ if .Site.Params.homeIntroTitle }}
+    <h1>{{ .Site.Params.homeIntroTitle }}</h1>
+    {{ end }}
+
+    {{ if .Site.Params.homeIntroContent }}
+    <p>{{ .Site.Params.homeIntroContent | markdownify }}</p>
+    {{ end }}
+</div>
+
+{{ end }}
+
+{{/* Social Icons */}}
+
+{{ with site.Params.social }}
+<div class="social-icons">
+    {{- range . }}
+    <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+        title="{{ (.title | default .name) | title }}">
+        {{ partial "svg.html" . }}
+    </a>
+    {{- end }}
+</div>
+{{ end }}
+
+{{/* Collection Section */}}
+
+{{ if .Site.Params.homeCollection }}
+
+{{ with .Site.Params.homeCollectionTitle}}
+<h1> {{ . }} </h1>
+{{ end }}
+
+{{ $pages := where .Site.RegularPages "Section" .Site.Params.homeCollection }}
+
+{{ $paginationSize := 1}}
+{{ if (gt .Site.Params.paginationSize 0) }}
+{{ $paginationSize = .Site.Params.paginationSize }}
+{{ end }}
+
+{{ $paginator := .Paginate $pages $paginationSize }}
+
+{{ range $index, $page := $paginator.Pages }}
+{{ partial "post-entry.html" $page}}
+{{ end }}
+
+{{ partial "pagination-controls.html" $paginator}}
+
+{{ end }}
+
+{{ end }}
