@@ -28,12 +28,14 @@ Here is an example configuration:
 ```toml
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-disableKinds = ['taxonomy']
-title = 'Title'
+title = 'Francesco Tomaselli'
 theme = 'Typo'
 
-googleAnalytics = "G-XXXXXXXXX"
+# Disable tags
+disableKinds = ['taxonomy']
 
+# Google analytics code
+googleAnalytics = "G-xxxxxxxxxx"
 
 [params]
 # Math mode
@@ -43,10 +45,8 @@ math = true
 homeIntro = true
 homeIntroTitle = 'Hi!'
 homeIntroContent = """
-Here is my blog, this supports markdown: 
-- a
-- b
-- c
+I am an Italian Software Engineer with a strong foundation in computer science and a passion for solving complex problems.
+I am interested in a range of topics, including algorithms, distributed systems, databases, and information retrieval.
 """
 
 # Collection to display on home
@@ -59,16 +59,15 @@ paginationSize = 100
 # Social icons
 [[params.social]]
 name = "linkedin"
-url = "https://www.linkedin.com/in/"
+url = "https://www.linkedin.com/in/your-name"
 
 [[params.social]]
 name = "medium"
-url = "https://medium.com/"
+url = "https://medium.com/@your-name"
 
 [[params.social]]
 name = "github"
-url = "https://github.com/"
-
+url = "https://github.com/your-name"
 
 # Main menu pages
 [[params.menu]]
@@ -80,13 +79,12 @@ name = "posts"
 url = "/posts"
 
 [[params.menu]]
-name = "about"
-url = "/about"
+name = "resume"
+url = "/resume"
 
-# Syntax highligth on code blocks
+# Syntax highligth on code blocks, all styles: 
+# https://xyproto.github.io/splash/docs/all.html
 [markup]
 [markup.highlight]
 style = 'algol'
 ```
-
-Tags are intentionally omitted.
