@@ -31,7 +31,7 @@
 
     /* code */
     --code-padding: 1.5rem;
-    --code-border-radius: 20px;
+    --code-border-radius: 10px;
 
     /* Footer */
     --footer-height: 3rem;
@@ -42,11 +42,13 @@
     /* Theme */
     --content: rgb(30, 30, 30);
     --background: rgb(255, 255, 255);
+    --code-background: rgb(245, 245, 245);
 }
 
 .dark {
     --content: rgb(218, 218, 218);
     --background: rgb(30, 30, 30);
+    --code-background: rgb(40, 40, 40);
 }
 
 @media screen and (max-width: 1024px) {
