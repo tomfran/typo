@@ -1,8 +1,5 @@
-/* BASE */
-
 html {
   scroll-behavior: smooth;
-  padding: 0;
 }
 
 body {
@@ -14,6 +11,8 @@ body {
   max-width: var(--main-width);
   padding-left: var(--main-padding);
   padding-right: var(--main-padding);
+  color: var(--content);
+  background: var(--background);
 }
 
 .content {
@@ -100,7 +99,6 @@ hr {
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
-
 
 /* Header */
 
@@ -283,11 +281,29 @@ footer a {
   content: counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "\00a0\00a0";
 }
 
-/* Dark mode */
+/* light and dark images */
+
 .dark .img-light {
   display: none !important;
 }
 
 .light .img-dark {
   display: none !important;
+}
+
+/* 404 */
+
+.not-found {
+  display: flex;
+  align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found div {
+  text-align: center;
+}
+
+.not-found div h1 {
+  font-size: 6rem;
 }
