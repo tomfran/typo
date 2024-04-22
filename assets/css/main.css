@@ -282,3 +282,12 @@ footer a {
 .autonumber h4:before {
   content: counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "\00a0\00a0";
 }
+
+/* Dark mode */
+.dark .img-light {
+  display: none !important;
+}
+
+.light .img-dark {
+  display: none !important;
+}
