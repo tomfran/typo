@@ -12,6 +12,7 @@
 
 ![1](misc/3.png)
 
+
 ## Installation
 
 To receive updates, add the theme as a submodule: 
