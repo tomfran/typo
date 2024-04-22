@@ -1,0 +1,19 @@
+.flex {
+    display: flex;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.small {
+    font-size: medium;
+}
+
+.monospace {
+    font-family: "Monaspace";
+}

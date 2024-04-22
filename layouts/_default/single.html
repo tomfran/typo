@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+{{/* Intro */}}
+
+<div class="single-intro-container">
+
+  {{/* Title and Summary */}}
+
+  <h1 class="single-title">{{ .Title }}</h1>
+  {{if .Param "summary" }}
+  <p class="single-summary">{{ .Summary }}</p>
+  {{ end }}
+
+  {{/* Reading Time */}}
+
+  <p class="single-readtime">
+    {{if .Date }}
+    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := .Date | time.Format ":date_long" }}
+    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    -
+    {{end}}
+    {{if (.Param "readTime")}}
+    {{.ReadingTime}} min
+    {{end }}
+  </p>
+
+</div>
+
+{{/* Table of Content */}}
+
+{{if .Param "toc" }}
+<aside class="toc">
+  <p><strong>Table of contents</strong></p>
+  {{ .TableOfContents }}
+</aside>
+{{ end }}
+
+{{/* Actual document content */}}
+
+<div class="single-content">
+  {{ .Content }}
+</div>
+
+{{ end }}

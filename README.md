@@ -1,2 +1,10 @@
-# typo
-A dead simple Hugo theme for your blogs.
+![banner](misc/readme.png)
+
+## Installation
+...
+
+## Features
+...
+
+## Configuration
+...
