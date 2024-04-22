@@ -88,3 +88,8 @@ url = "/resume"
 [markup.highlight]
 style = 'algol'
 ```
+
+## Future works
+
+- [ ] Dark mode
+- [ ] Headings auto-numbering
