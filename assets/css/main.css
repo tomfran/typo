@@ -308,3 +308,11 @@ footer a {
 .not-found div h1 {
   font-size: 6rem;
 }
+
+.dark-toggle svg path {
+  fill: var(--background) !important;
+}
+
+.dark-toggle svg text {
+  fill: var(--content) !important;
+}
