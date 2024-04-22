@@ -8,7 +8,7 @@ html {
 body {
   font-family: "Literata";
   font-size: 1rem;
-  color: rgb(30, 30, 30);
+  color: var(--content);
   line-height: 1.3rem;
   margin: auto;
   max-width: var(--main-width);
@@ -96,8 +96,8 @@ code {
 }
 
 hr {
-  border: 1px solid black;
-  margin-top: 2rem;
+  border: 1px solid var(--content);
+  margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
