@@ -67,6 +67,13 @@ pre {
   margin-top: var(--code-margin-top);
   margin-bottom: var(--code-margin-bottom);
   background-color: var(--code-background) !important;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
 }
 
 code {
@@ -81,11 +88,16 @@ code {
   font-size: .9em;
 }
 
-/* Latex Overflow */
 
 .MathJax {
   overflow-x: auto;
   overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.MathJax::-webkit-scrollbar {
+  display: none;
 }
 
 /* Footnotes */
@@ -306,4 +318,5 @@ footer a {
 
 .not-found div h1 {
   font-size: 6rem;
+  margin-bottom: 3rem;
 }
