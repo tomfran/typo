@@ -1,5 +1,4 @@
-![banner](https://github.com/tomfran/typo/blob/main/images/banner-light.png#gh-light-mode-only)
-![banner](https://github.com/tomfran/typo/blob/main/images/banner-dark.png#gh-dark-mode-only)
+![banner](https://github.com/tomfran/typo/blob/main/images/banner-light.png)
 
 # Typo, a Hugo theme.
 
