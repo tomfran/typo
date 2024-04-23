@@ -257,10 +257,14 @@ footer a {
 }
 
 .toc ul {
-  margin-top: 0;
-  margin-bottom: .5rem;
+  margin-top: .1rem;
+  margin-bottom: .1rem;
 }
 
+.toc li {
+  margin-top: .1rem;
+  margin-bottom: .1rem;
+}
 
 /* Autonumbering */
 
