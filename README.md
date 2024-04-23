@@ -37,6 +37,8 @@ git submodule add git@github.com:tomfran/typo.git themes/typo
 
 Otherwise you can clone the repo and copy it manually to yout theme folder.
 
+You can find a repo using this theme [here](https://github.com/tomfran/blog).
+
 ## 2 Features
 
 ### 2.1 Header autonumbering
