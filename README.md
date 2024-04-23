@@ -104,7 +104,7 @@ Your content...
 ```toml
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'Francesco Tomaselli'
+title = 'Title'
 theme = 'Typo'
 
 # Disable tags, actually, they are rendered as a list, but the idea is to disable them.
@@ -119,10 +119,11 @@ math = true
 
 # Intro on main page, content in markdown, if you omit title or content the other can be displayed
 homeIntro = true
-homeIntroTitle = 'Hi!'
+homeIntroTitle = 'Hello traveler!'
 homeIntroContent = """
-I am an Italian Software Engineer with a strong foundation in computer science and a passion for solving complex problems.
-I am interested in a range of topics, including algorithms, distributed systems, databases, and information retrieval.
+Join me on this journey as I explore the ever-evolving landscape of software engineering, 
+fueled by curiosity and a relentless drive to innovate. 
+Together, let's push the boundaries of what's possible and craft solutions that shape the future.
 """
 
 # Collection to display on home page: 
