@@ -1,4 +1,5 @@
-![banner](misc/readme.png)
+![banner](misc/banner-light.png##gh-light-mode-only)
+![banner](misc/banner-dark.png##gh-dark-mode-only)
 
 # Typo, a Hugo theme.
 
