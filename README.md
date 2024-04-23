@@ -1,17 +1,17 @@
-![banner](misc/banner-light.png##gh-light-mode-only)
-![banner](misc/banner-dark.png##gh-dark-mode-only)
+![banner](https://github.com/tomfran/typo/blob/main/images/banner-light.png#gh-light-mode-only)
+![banner](https://github.com/tomfran/typo/blob/main/images/banner-dark.png#gh-dark-mode-only)
 
 # Typo, a Hugo theme.
 
 **Homepage**
 
-![1](misc/1.png)
+![1](https://github.com/tomfran/typo/blob/main/images/1.png)
 
 **Article**
 
-![2](misc/2.png)
+![2](https://github.com/tomfran/typo/blob/main/images/2.png)
 
-![3](misc/3.png)
+![3](https://github.com/tomfran/typo/blob/main/images/3.png)
 
 
 ## Installation
@@ -141,3 +141,7 @@ url = "/resume"
 [markup.highlight]
 style = 'algol'
 ```
+
+### References
+
+- The SVGs for social icons are taken from [Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod).
