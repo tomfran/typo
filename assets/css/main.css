@@ -220,7 +220,7 @@ footer a {
 }
 
 .single-title {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   margin-bottom: .5rem;
 }
 
@@ -296,7 +296,6 @@ footer a {
 
 .not-found {
   display: flex;
-  align: center;
   align-items: center;
   justify-content: center;
 }
@@ -307,12 +306,4 @@ footer a {
 
 .not-found div h1 {
   font-size: 6rem;
-}
-
-.dark-toggle svg path {
-  fill: var(--background) !important;
-}
-
-.dark-toggle svg text {
-  fill: var(--content) !important;
 }
