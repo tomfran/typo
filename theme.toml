@@ -7,7 +7,7 @@ homepage = 'https://github.com/tomfran/typo'
 
 demosite = 'https://tomfran.github.io/'
 
-tags = ['blog']
+tags = ['blog', 'minimal']
 
 [author]
 name = 'Francesco Tomaselli'
