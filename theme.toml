@@ -7,7 +7,18 @@ homepage = 'https://github.com/tomfran/typo'
 
 demosite = 'https://tomfran.github.io/'
 
-tags = ['blog', 'minimal']
+tags = ["responsive", "simple", "clean", "light", "dark", "blog", "minimal"]
+
+features = [
+    "responsive",
+    "blog",
+    "table-of-contents",
+    "highlight.js",
+    "favicon",
+    "social-icons",
+    "minified-assets",
+    "dark-light-images",
+]
 
 [author]
 name = 'Francesco Tomaselli'
