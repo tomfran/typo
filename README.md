@@ -115,7 +115,8 @@ I am an Italian Software Engineer with a strong foundation in computer science a
 I am interested in a range of topics, including algorithms, distributed systems, databases, and information retrieval.
 """
 
-# Collection to display on home page, do not set if tou don't want them
+# Collection to display on home page: 
+# in this case we would display content/posts pages
 homeCollectionTitle = 'Posts'
 homeCollection = 'posts'
 
@@ -150,7 +151,7 @@ url = "/resume"
 
 # Syntax highligth on code blocks, all styles: 
 # https://xyproto.github.io/splash/docs/all.html
-# I sugges algol
+# I suggest algol
 [markup]
 [markup.highlight]
 style = 'algol'
@@ -158,4 +159,4 @@ style = 'algol'
 
 ## 4 References
 
-- The SVGs for social icons are taken from [Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod).
+The SVGs for social icons are taken from [Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod).
