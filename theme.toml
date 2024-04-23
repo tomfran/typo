@@ -1,6 +1,6 @@
 name = 'Typo'
 license = 'MIT'
-licenselink = 'https://github.com/tomfran/typo/LICENSE'
+licenselink = 'https://github.com/tomfran/typo/blob/main/LICENSE'
 description = 'A simple Hugo theme'
 
 homepage = 'https://github.com/tomfran/typo'
