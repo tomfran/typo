@@ -13,8 +13,23 @@
 
 ![3](https://github.com/tomfran/typo/blob/main/images/3.png)
 
+---
 
-## Installation
+**Table of content**
+
+- [1 Installation](#1-installation)
+- [2 Features](#2-features)
+  - [2.1 Header autonumbering](#21-header-autonumbering)
+  - [2.2 Appearance preferences](#22-appearance-preferences)
+  - [2.3 Dark and light mode images](#23-dark-and-light-mode-images)
+- [3 Configuration example](#3-configuration-example)
+  - [3.1 post.md](#31-postmd)
+  - [3.2 hugo.toml](#32-hugotoml)
+- [4 References](#4-references)
+
+---
+
+## 1 Installation
 
 To receive updates, add the theme as a submodule: 
 ```
@@ -23,9 +38,9 @@ git submodule add git@github.com:tomfran/typo.git themes/typo
 
 Otherwise you can clone the repo and copy it manually to yout theme folder.
 
-## Features
+## 2 Features
 
-### Header autonumbering
+### 2.1 Header autonumbering
 
 You can add auto-numbering to the pages by setting the following parameter in 
 the header of your md files. The numbering is currently supported to level 3 subheadings.
@@ -34,7 +49,7 @@ the header of your md files. The numbering is currently supported to level 3 sub
 autonumber: true
 ```
 
-### Appearance preferences
+### 2.2 Appearance preferences
 
 In your `hugo.toml` file you can specify the preferred theme: 
 
@@ -42,7 +57,7 @@ In your `hugo.toml` file you can specify the preferred theme:
 theme = "light | dark | auto"
 ```
 
-### Dark and light mode images
+### 2.3 Dark and light mode images
 
 You can tags to decide if images are displayed in dark or light mode, as Github id doing for readmes.
 
@@ -58,9 +73,9 @@ You can of course remove the final tag
 to alway show the same image on light and 
 dark mode.
 
-## Configuration example
+## 3 Configuration example
 
-**post.md**
+### 3.1 post.md
 
 ```
 ---
@@ -75,7 +90,7 @@ autonumber: true
 Your content...
 ```
 
-**hugo.toml**
+### 3.2 hugo.toml
 
 ```toml
 baseURL = 'https://example.org/'
@@ -142,6 +157,6 @@ url = "/resume"
 style = 'algol'
 ```
 
-### References
+## 4 References
 
 - The SVGs for social icons are taken from [Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod).
