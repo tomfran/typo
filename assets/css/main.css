@@ -126,8 +126,9 @@ hr {
   margin-right: var(--header-menu-side-gap);
 }
 
-.header h1 {
+.header-title {
   font-size: 2.6em;
+  font-weight: bold;
   margin-bottom: 0;
   margin-top: 0;
 }
