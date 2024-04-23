@@ -2,6 +2,8 @@
 
 # Typo, a Hugo theme.
 
+Typo is a theme backed by simplicity, as you can see in the screenshots below. The goal was to have a website centered around content and nothing more.
+
 **Homepage**
 
 ![1](https://raw.githubusercontent.com/tomfran/typo/main/images/1.png)
@@ -21,10 +23,12 @@
   - [2.1 Header autonumbering](#21-header-autonumbering)
   - [2.2 Appearance preferences](#22-appearance-preferences)
   - [2.3 Dark and light mode images](#23-dark-and-light-mode-images)
+  - [2.4 Fonts](#24-fonts)
 - [3 Configuration example](#3-configuration-example)
   - [3.1 post.md](#31-postmd)
   - [3.2 hugo.toml](#32-hugotoml)
 - [4 References](#4-references)
+- [5 Contributing](#5-contributing)
 
 ---
 
@@ -35,7 +39,7 @@ To receive updates, add the theme as a submodule:
 git submodule add git@github.com:tomfran/typo.git themes/typo
 ```
 
-Otherwise you can clone the repo and copy it manually to yout theme folder.
+Otherwise you can clone the repo and copy it manually to your theme folder.
 
 You can find a repo using this theme [here](https://github.com/tomfran/blog).
 
@@ -73,6 +77,10 @@ of an image, setting #dark or #light do the trick.
 You can of course remove the final tag 
 to alway show the same image on light and 
 dark mode.
+
+### 2.4 Fonts
+
+The fonts in use are [Literata](https://fonts.google.com/specimen/Literata) and [Monaspace Argon](https://github.com/githubnext/monaspace).
 
 ## 3 Configuration example
 
@@ -162,3 +170,7 @@ style = 'algol'
 ## 4 References
 
 The SVGs for social icons are taken from [Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod).
+
+## 5 Contributing
+
+Feel free to write proposals or stuff you'd like to see. If you feel like contributing, PRs are welcome!
