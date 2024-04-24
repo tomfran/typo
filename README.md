@@ -94,6 +94,7 @@ summary: "A search engine overview and Rust implementation."
 toc: true 
 readTime: true
 autonumber: true
+math: true
 ---
 
 Your content...
