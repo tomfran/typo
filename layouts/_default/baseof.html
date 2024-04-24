@@ -4,9 +4,6 @@
 
 <head>
   {{ partial "head.html" . }}
-  {{ if .Param "math" }}
-  {{ partialCached "math.html" . }}
-  {{ end }}
 </head>
 
 {{ $theme := "auto"}}
@@ -28,7 +25,7 @@
   </div>
 
   <footer>
-    {{ partial "footer.html" . }}
+    {{ partialCached "footer.html" . }}
   </footer>
 
 </body>
@@ -70,7 +67,6 @@
   }
 
   setTheme();
-
 
 </script>
 
