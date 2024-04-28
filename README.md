@@ -39,7 +39,7 @@ To receive updates, add the theme as a submodule:
 git submodule add git@github.com:tomfran/typo.git themes/typo
 ```
 
-Otherwise you can clone the repo and copy it manually to your theme folder.
+Otherwise, you can clone the repo and copy it manually to your theme folder.
 
 You can find a repo using this theme [here](https://github.com/tomfran/blog).
 
@@ -47,8 +47,7 @@ You can find a repo using this theme [here](https://github.com/tomfran/blog).
 
 ### 2.1 Header autonumbering
 
-You can add auto-numbering to the pages by setting the following parameter in 
-the header of your md files. The numbering is currently supported to level 3 subheadings.
+You can add auto-numbering to the pages by setting the following parameter in the header of your MD files. The numbering is currently supported by level 3 subheadings.
 
 ```
 autonumber: true
@@ -64,10 +63,9 @@ theme = "light | dark | auto"
 
 ### 2.3 Dark and light mode images
 
-You can tags to decide if images are displayed in dark or light mode, as Github id doing for readmes.
+You can tags to decide if images are displayed in dark or light mode, as GitHub is doing for readmes.
 
-Let's say you have two different versions
-of an image, setting #dark or #light do the trick.
+Let's say you have two different versions of an image, setting `#dark` or `#light` does the trick.
 
 ```md
 ![skiplist](skiplist-light.png#light)
@@ -75,7 +73,7 @@ of an image, setting #dark or #light do the trick.
 ```
 
 You can of course remove the final tag 
-to alway show the same image on light and 
+to always show the same image in light and 
 dark mode.
 
 ### 2.4 Fonts
@@ -161,7 +159,7 @@ url = "/posts"
 name = "resume"
 url = "/resume"
 
-# Syntax highligth on code blocks, all styles: 
+# Syntax highlight on code blocks, all styles: 
 # https://xyproto.github.io/splash/docs/all.html
 # I suggest algol
 [markup]
