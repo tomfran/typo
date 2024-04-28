@@ -4,10 +4,6 @@
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
 
-{{ if .Param "math" }}
-{{ partialCached "math.html" . }}
-{{ end }}
-
 {{ if hugo.IsProduction }}
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}

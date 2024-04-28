@@ -24,11 +24,13 @@ Typo is a theme backed by simplicity, as you can see in the screenshots below. T
   - [2.2 Appearance preferences](#22-appearance-preferences)
   - [2.3 Dark and light mode images](#23-dark-and-light-mode-images)
   - [2.4 Fonts](#24-fonts)
+  - [2.5 Miscellaneous](#25-miscellaneous)
 - [3 Configuration example](#3-configuration-example)
   - [3.1 post.md](#31-postmd)
   - [3.2 hugo.toml](#32-hugotoml)
 - [4 References](#4-references)
 - [5 Contributing](#5-contributing)
+- [6 Future Works](#6-future-works)
 
 ---
 
@@ -51,6 +53,15 @@ You can add auto-numbering to the pages by setting the following parameter in th
 
 ```
 autonumber: true
+```
+
+Note that autonumbering starts from h2 tags, hence you need 
+to start sections with ## headings. 
+
+```
+## First    ->  1 First
+### Second  ->  1.1 Second
+#### Third  ->  1.1.1 Third
 ```
 
 ### 2.2 Appearance preferences
@@ -80,6 +91,12 @@ dark mode.
 
 The fonts in use are [Literata](https://fonts.google.com/specimen/Literata) and [Monaspace Argon](https://github.com/githubnext/monaspace).
 
+### 2.5 Miscellaneous
+
+Various miscellaneous features: 
+- Latex blocks overflows on mobile to prevent having strange alignments;
+- Code blocks are displayed with ligatures.
+
 ## 3 Configuration example
 
 ### 3.1 post.md
@@ -89,7 +106,7 @@ The fonts in use are [Literata](https://fonts.google.com/specimen/Literata) and 
 title: "Search Engine in Rust"
 date: "2024-02-01"
 summary: "A search engine overview and Rust implementation."
-toc: true 
+toc: true
 readTime: true
 autonumber: true
 math: true
@@ -174,3 +191,10 @@ The SVGs for social icons are taken from [Hugo PaperMod](https://github.com/adit
 ## 5 Contributing
 
 Feel free to write proposals or stuff you'd like to see. If you feel like contributing, PRs are welcome!
+
+## 6 Future Works
+
+- [ ] Bring SEO and [performance metrics](https://pagespeed.web.dev/) to 100% both on mobile and desktop;
+- [ ] Add additional options on posts list view; 
+- [ ] Add color palettes; 
+- [ ] Add a proper Tags page; 
