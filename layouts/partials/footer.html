@@ -3,3 +3,7 @@
     and
     <a href="https://github.com/tomfran/typo">tomfran/typo</a>
 </p>
+
+{{ if .Param "math" }}
+{{ partialCached "math.html" . }}
+{{ end }}

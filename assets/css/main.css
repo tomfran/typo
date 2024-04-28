@@ -89,14 +89,14 @@ code {
 }
 
 
-.MathJax {
+.katex-display {
   overflow-x: auto;
   overflow-y: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-.MathJax::-webkit-scrollbar {
+.katex-display::-webkit-scrollbar {
   display: none;
 }
 
