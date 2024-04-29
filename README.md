@@ -72,6 +72,8 @@ In your `hugo.toml` file you can specify the preferred theme:
 theme = "light | dark | auto"
 ```
 
+If nothing is set, the default setting is auto.
+
 ### 2.3 Dark and light mode images
 
 You can tags to decide if images are displayed in dark or light mode, as GitHub is doing for readmes.
@@ -130,11 +132,10 @@ disableKinds = ['taxonomy']
 googleAnalytics = "G-xxxxxxxxxx"
 
 [params]
-# Math mode
-math = true
+# Appearance
+theme = 'auto'
 
 # Intro on main page, content in markdown, if you omit title or content the other can be displayed
-homeIntro = true
 homeIntroTitle = 'Hello traveler!'
 homeIntroContent = """
 Join me on this journey as I explore the ever-evolving landscape of software engineering, 
