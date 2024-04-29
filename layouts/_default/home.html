@@ -3,18 +3,17 @@
 {{ .Content }}
 
 {{/* Intro summary section */}}
-{{ if .Site.Params.homeIntro }}
 
+{{ if or .Site.Params.homeIntroTitle .Site.Params.homeIntroContent }}
 <div class="intro">
-    {{ if .Site.Params.homeIntroTitle }}
-    <h1>{{ .Site.Params.homeIntroTitle }}</h1>
+    {{ with .Site.Params.homeIntroTitle }}
+    <h1>{{ . }}</h1>
     {{ end }}
 
-    {{ if .Site.Params.homeIntroContent }}
-    <p>{{ .Site.Params.homeIntroContent | markdownify }}</p>
+    {{ with .Site.Params.homeIntroContent }}
+    <p>{{ . | markdownify }}</p>
     {{ end }}
 </div>
-
 {{ end }}
 
 {{/* Social Icons */}}
