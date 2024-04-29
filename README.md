@@ -4,6 +4,10 @@
 
 Typo is a theme backed by simplicity, as you can see in the screenshots below. The goal was to have a website centered around content and nothing more.
 
+[![hugo-typo](https://img.shields.io/badge/hugo_themes-@typo-red)](https://themes.gohugo.io/themes/typo/)
+[![GitHub Release](https://img.shields.io/github/v/release/tomfran/typo)](https://github.com/tomfran/typo/releases/latest)
+[![last-commit](https://img.shields.io/github/last-commit/tomfran/typo)](https://github.com/tomfran/typo/commits/)
+
 **Homepage**
 
 ![1](https://raw.githubusercontent.com/tomfran/typo/main/images/1.png)
@@ -193,9 +197,12 @@ The SVGs for social icons are taken from [Hugo PaperMod](https://github.com/adit
 
 Feel free to write proposals or stuff you'd like to see. If you feel like contributing, PRs are welcome!
 
+Leave a star if you are using the theme, I would really appreciate! :star:
+
 ## 6 Future Works
 
 - [ ] Bring SEO and [performance metrics](https://pagespeed.web.dev/) to 100% both on mobile and desktop;
 - [ ] Add additional options on posts list view; 
 - [ ] Add color palettes; 
-- [ ] Add a proper Tags page; 
+- [ ] Add a proper Tags page;
+- [ ] Cleanup SVGs with coherent icon styles.
