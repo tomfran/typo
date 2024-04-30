@@ -1,4 +1,10 @@
 <div class="post-line">
-    <p class="post-date">{{ .Date.Format "2 Jan 2006" }} </p>
-    <p class="post-title"> <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+    <p class="line-date">{{ .Date.Format "2 Jan 2006" }} </p>
+    <div>
+        <p class="line-title"> <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+
+        {{ if .Site.Params.listSummaries }}
+        <p class="line-summary"> {{ .Summary }} </p>
+        {{ end }}
+    </div>
 </div>
