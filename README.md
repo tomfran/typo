@@ -155,7 +155,9 @@ homeCollection = 'posts'
 # Pagination size across all website, this is the same for homepage and single list page
 paginationSize = 100
 # Display summaries under post list entries
-listSummaries = false
+listSummaries = true
+# List entries date format
+listDateFormat = '2 Jan 2006'
 
 # Social icons
 [[params.social]]
