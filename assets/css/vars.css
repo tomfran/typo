@@ -29,9 +29,12 @@
     --toc-margin-top: 2rem;
     --toc-margin-bottom: 3rem;
 
-    /* code */
+    /* Code */
     --code-padding: 1.5rem;
     --code-border-radius: 10px;
+
+    /* Social section */
+    --social-icons-bottom-margin: 3rem;
 
     /* Footer */
     --footer-height: 3rem;
@@ -61,5 +64,6 @@
 @media screen and (max-width: 640px) {
     :root {
         --header-top-gap: 1rem;
+        --social-icons-bottom-margin: 0rem;
     }
 }
