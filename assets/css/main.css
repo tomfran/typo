@@ -151,10 +151,6 @@ footer a {
 
 /* Posts list  */
 
-.post-list-container {
-  margin-bottom: 2rem;
-}
-
 .post-line {
   margin-bottom: .5rem;
   display: flex;
@@ -166,16 +162,25 @@ footer a {
   margin-bottom: 0rem;
 }
 
-.post-date {
+.line-date {
   font-size: small;
   font-family: "Monaspace";
-  width: 110px;
+  min-width: 110px;
+  max-width: 110px;
   text-align: right;
   padding-right: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 }
 
-.post-title {
+.line-title {
   margin: 0;
+}
+
+.line-summary {
+  font-size: small;
+  margin-top: .2rem !important;
+  font-style: italic;
 }
 
 .pagination {
@@ -209,7 +214,7 @@ footer a {
 
 .social-icons {
   padding: 12px 0;
-  margin-bottom: 3rem;
+  margin-bottom: var(--social-icons-bottom-margin)
 }
 
 .social-icons a {
