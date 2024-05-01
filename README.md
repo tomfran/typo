@@ -43,10 +43,12 @@ Typo is a theme backed by simplicity, as you can see in the screenshots below. T
 
 To receive updates, add the theme as a submodule: 
 ```
-git submodule add git@github.com:tomfran/typo.git themes/typo
+git submodule add --depth=1 git@github.com:tomfran/typo.git themes/typo
 ```
 
 Otherwise, you can clone the repo and copy it manually to your theme folder.
+
+You then need to set typo as your theme in your [config file](#32-hugotoml).
 
 You can find a repo using this theme [here](https://github.com/tomfran/blog).
 
