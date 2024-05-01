@@ -29,6 +29,7 @@ Typo is a theme backed by simplicity, as you can see in the screenshots below. T
   - [2.3 Dark and light mode images](#23-dark-and-light-mode-images)
   - [2.4 Fonts](#24-fonts)
   - [2.5 Miscellaneous](#25-miscellaneous)
+  - [2.6 Extending the theme](#26-extending-the-theme)
 - [3 Configuration example](#3-configuration-example)
   - [3.1 post.md](#31-postmd)
   - [3.2 hugo.toml](#32-hugotoml)
@@ -102,6 +103,11 @@ The fonts in use are [Literata](https://fonts.google.com/specimen/Literata) and 
 Various miscellaneous features: 
 - Latex blocks overflows on mobile to prevent having strange alignments;
 - Code blocks are displayed with ligatures.
+
+### 2.6 Extending the theme
+
+You can easily modify the existing style by placing custom CSS inside `assets/css/custom.css`
+This has priority over existing CSS.
 
 ## 3 Configuration example
 
@@ -206,7 +212,5 @@ Leave a star if you are using the theme, I would really appreciate! :star:
 ## 6 Future Works
 
 - [ ] Bring SEO and [performance metrics](https://pagespeed.web.dev/) to 100% both on mobile and desktop;
-- [ ] Add additional options on posts list view; 
 - [ ] Add color palettes; 
 - [ ] Add a proper Tags page;
-- [ ] Cleanup SVGs with coherent icon styles.
