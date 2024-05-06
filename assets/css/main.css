@@ -157,6 +157,12 @@ footer a {
   align-items: baseline;
 }
 
+.tag-line {
+  margin-bottom: .5rem;
+  display: flex;
+  align-items: baseline;
+}
+
 .post-line p {
   margin-top: 0rem;
   margin-bottom: 0rem;
@@ -174,6 +180,10 @@ footer a {
 }
 
 .line-title {
+  margin: 0;
+}
+
+.tag-title {
   margin: 0;
 }
 
@@ -329,4 +339,11 @@ footer a {
 .not-found div h1 {
   font-size: 6rem;
   margin-bottom: 3rem;
+}
+
+/* breadcrumbs */
+
+.breadcrumbs {
+  /* font-family: "Monaspace"; */
+  font-size: small;
 }
