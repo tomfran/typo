@@ -2,6 +2,8 @@
 
 {{/* Intro */}}
 
+{{ partial "breadcrumbs.html" . }}
+
 <div {{ if .Param "autonumber" }} class="autonumber" {{ end }}>
 
   <div class=" single-intro-container">
@@ -29,6 +31,8 @@
     </p>
 
   </div>
+
+  {{/* {{ .Params.tags }} */}}
 
   {{/* Table of Content */}}
 
