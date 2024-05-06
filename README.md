@@ -193,6 +193,16 @@ url = "/posts"
 name = "resume"
 url = "/resume"
 
+# giscus conf, for more detail, see https://giscus.app/
+[params.giscus]
+  enable = true
+  repo = ""
+  repoid = ""
+  category = ""
+  categoryid = ""
+  mapping = "pathname"
+  theme = "light"
+
 # Syntax highlight on code blocks, all styles: 
 # https://xyproto.github.io/splash/docs/all.html
 # I suggest algol
