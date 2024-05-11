@@ -105,7 +105,9 @@ The fonts in use are [Literata](https://fonts.google.com/specimen/Literata) and 
 Various miscellaneous features: 
 - Latex blocks overflows on mobile to prevent having strange alignments;
 - Code blocks are displayed with ligatures;
-- [Giscus](https://giscus.app/) comments support.
+- [Giscus](https://giscus.app/) comments support;
+- Breadcrumbs;
+- Tags and ability to not show them on posts.
 
 ### 2.6 Extending the theme
 
@@ -125,6 +127,8 @@ toc: true
 readTime: true
 autonumber: true
 math: true
+tags: ["information-retrieval", "rust"]
+showTags: false
 ---
 
 Your content...
@@ -137,9 +141,6 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Title'
 theme = 'Typo'
-
-# Disable tags, actually, they are rendered as a list, but the idea is to disable them.
-disableKinds = ['taxonomy']
 
 # Google analytics code
 googleAnalytics = "G-xxxxxxxxxx"
@@ -167,6 +168,9 @@ paginationSize = 100
 listSummaries = true
 # List entries date format
 listDateFormat = '2 Jan 2006'
+
+# Breadcrumbs
+breadcrumbs = true
 
 # Social icons
 [[params.social]]
@@ -225,5 +229,4 @@ Leave a star if you are using the theme, I would really appreciate! :star:
 ## 6 Future Works
 
 - [ ] Bring SEO and [performance metrics](https://pagespeed.web.dev/) to 100% both on mobile and desktop;
-- [ ] Add color palettes; 
-- [ ] Add a proper Tags page;
+- [ ] Add color palettes.
