@@ -2,36 +2,35 @@
 <html lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
   dir="{{ or site.Language.LanguageDirection `ltr` }}">
 
-<head>
-  {{ partial "head.html" . }}
-</head>
+  <head>
+    {{ partial "head.html" . }}
+  </head>
 
-{{ $theme := "auto"}}
+  {{ $theme := "auto"}}
 
-{{ with .Param "theme" }}
-{{ $theme = .}}
-{{ end }}
+  {{ with .Param "theme" }}
+  {{ $theme = .}}
+  {{ end }}
 
-<body class="{{ $theme }}">
+  <body class="{{ $theme }}">
 
-  <div class="content">
-    <header>
-      {{ partial "header.html" . }}
-    </header>
+    <div class="content">
+      <header>
+        {{ partial "header.html" . }}
+      </header>
 
-    <main class="main">
-      {{ block "main" . }}{{ end }}
-    </main>
-  </div>
+      <main class="main">
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
 
-  <footer>
-    {{ partial "footer.html" . }}
-  </footer>
+    <footer>
+      {{ partial "footer.html" . }}
+    </footer>
 
-</body>
+  </body>
 
-
-<script>
+  <script>
 
   function isAuto() {
     return document.body.classList.contains("auto");
@@ -69,6 +68,5 @@
   setTheme();
 
 </script>
-
 
 </html>
