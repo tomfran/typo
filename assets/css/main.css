@@ -356,3 +356,9 @@ footer a {
   font-size: small;
   margin-bottom: calc(-0.5 * var(--h1-margin-top));
 }
+
+/* Comments */
+
+.giscus {
+  margin-top: 3rem;
+}
