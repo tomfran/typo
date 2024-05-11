@@ -104,7 +104,8 @@ The fonts in use are [Literata](https://fonts.google.com/specimen/Literata) and 
 
 Various miscellaneous features: 
 - Latex blocks overflows on mobile to prevent having strange alignments;
-- Code blocks are displayed with ligatures.
+- Code blocks are displayed with ligatures;
+- [Giscus](https://giscus.app/) comments support.
 
 ### 2.6 Extending the theme
 
@@ -193,15 +194,15 @@ url = "/posts"
 name = "resume"
 url = "/resume"
 
-# giscus conf, for more detail, see https://giscus.app/
+# Giscus conf, for more detail, see https://giscus.app/
 [params.giscus]
-  enable = true
-  repo = ""
-  repoid = ""
-  category = ""
-  categoryid = ""
-  mapping = "pathname"
-  theme = "light"
+enable = true
+repo = ""
+repoid = ""
+category = ""
+categoryid = ""
+mapping = "pathname"
+theme = "light"
 
 # Syntax highlight on code blocks, all styles: 
 # https://xyproto.github.io/splash/docs/all.html
