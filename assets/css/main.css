@@ -265,6 +265,14 @@ footer a {
   margin-bottom: 6rem;
 }
 
+.single-tags {
+  margin-top: -1rem;
+}
+
+.single-tags span {
+  margin-right: .3rem;
+}
+
 /* Table of contents */
 
 .toc {
@@ -346,4 +354,5 @@ footer a {
 .breadcrumbs {
   /* font-family: "Monaspace"; */
   font-size: small;
+  margin-bottom: calc(-0.5 * var(--h1-margin-top));
 }

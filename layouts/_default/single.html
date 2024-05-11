@@ -6,7 +6,7 @@
 
 <div {{ if .Param "autonumber" }} class="autonumber" {{ end }}>
 
-  <div class=" single-intro-container">
+  <div class="single-intro-container">
 
     {{/* Title and Summary */}}
 
@@ -32,11 +32,28 @@
 
   </div>
 
-  {{/* {{ .Params.tags }} */}}
+  {{ if .Param "showTags" }}
+
+  {{ $taxonomy := "tags" }}
+
+  {{ with .Param $taxonomy }}
+  {{ $last := sub (. | len) 1 }}
+
+  <div class="single-tags">
+    {{ range $index, $tag := . }}
+    {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+    <span>
+      <a href="{{ .Permalink }}">#{{ $tag | urlize }}</a>
+    </span>
+    {{ end }}
+    {{ end }}
+  </div>
+  {{ end }}
+  {{ end }}
 
   {{/* Table of Content */}}
 
-  {{if .Param "toc" }}
+  {{ if .Param "toc" }}
   <aside class="toc">
     <p><strong>Table of contents</strong></p>
     {{ .TableOfContents }}
