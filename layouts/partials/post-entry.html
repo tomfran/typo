@@ -5,11 +5,14 @@
     {{ $dateFormat = .}}
     {{ end }}
 
-
     <p class="line-date">{{ .Date.Format $dateFormat }} </p>
 
     <div>
-        <p class="line-title"> <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+        <p class="line-title">
+            <a href="{{ .RelPermalink }}">
+                {{ .Title }}
+            </a>
+        </p>
 
         {{ if .Site.Params.listSummaries }}
         <p class="line-summary"> {{ .Summary }} </p>
