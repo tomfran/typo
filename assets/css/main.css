@@ -62,6 +62,7 @@ a {
 
 pre {
   padding: var(--code-padding);
+  border: 1px solid var(--code-border);
   overflow: scroll;
   border-radius: var(--code-border-radius);
   margin-top: var(--code-margin-top);
@@ -361,4 +362,14 @@ footer a {
 
 .giscus {
   margin-top: 3rem;
+}
+
+/* Back to top */
+
+.back-to-top {
+  text-align: center;
+  font-family: "Monaspace";
+  font-size: small;
+  margin-bottom: 2rem;
+  margin-top: -3rem;
 }
