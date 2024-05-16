@@ -67,6 +67,14 @@
     {{ partial "comments.html" . }}
   </div>
 
+  {{ if not (.Param "hideBackToTop") }}
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  {{ end }}
+
 </div>
 
 {{ end }}
