@@ -4,7 +4,7 @@
 
 Typo is a theme backed by simplicity, as you can see in the screenshots below. The goal was to have a website centered around content and nothing more.
 
-[![wiki](https://img.shields.io/badge/wiki-@github-orange)](https://themes.gohugo.io/themes/typo/)
+[![wiki](https://img.shields.io/badge/doc-wiki-orange)](https://github.com/tomfran/typo/wiki)
 [![hugo-typo](https://img.shields.io/badge/hugo_themes-@typo-red)](https://themes.gohugo.io/themes/typo/)
 [![GitHub Release](https://img.shields.io/github/v/release/tomfran/typo)](https://github.com/tomfran/typo/releases/latest)
 [![last-commit](https://img.shields.io/github/last-commit/tomfran/typo)](https://github.com/tomfran/typo/commits/)
