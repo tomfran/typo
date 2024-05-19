@@ -1,5 +1,5 @@
 :root {
-    --main-width: 900px;
+    --main-width: 750px;
     --main-padding: 1rem;
     --main-padding-bottom: 3rem;
 
@@ -43,17 +43,19 @@
     --content-height: calc(100vh - var(--footer-height));
 
     /* Theme */
-    --content: rgb(30, 30, 30);
+    --content-primary: rgb(36, 36, 36);
+    --content-secondary: rgb(117, 117, 117);
     --background: rgb(255, 255, 255);
     --code-background: rgb(249, 249, 249);
     --code-border: rgb(229, 229, 229);
 }
 
 .dark {
-    --content: rgb(218, 218, 218);
-    --background: rgb(30, 30, 30);
-    --code-background: rgb(40, 40, 40);
-    --code-border: rgb(60, 60, 60);
+    --content-primary: rgb(218, 218, 218);
+    --content-secondary: rgb(140, 140, 140);
+    --background: rgb(20, 20, 20);
+    --code-background: rgb(30, 30, 30);
+    --code-border: rgb(50, 50, 50);
 }
 
 @media screen and (max-width: 1024px) {
