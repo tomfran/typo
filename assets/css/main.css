@@ -5,13 +5,13 @@ html {
 body {
   font-family: "Literata";
   font-size: 1rem;
-  color: var(--content);
+  color: var(--content-primary);
   line-height: 1.3rem;
   margin: auto;
   max-width: var(--main-width);
   padding-left: var(--main-padding);
   padding-right: var(--main-padding);
-  color: var(--content);
+  color: var(--content-primary);
   background: var(--background);
 }
 
@@ -109,7 +109,7 @@ code {
 }
 
 hr {
-  border: 1px solid var(--content);
+  border: 1px solid var(--content-primary);
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
@@ -191,7 +191,8 @@ footer a {
 .line-summary {
   font-size: small;
   margin-top: .2rem !important;
-  font-style: italic;
+  /* font-style: italic; */
+  color: var(--content-secondary);
 }
 
 .pagination {
@@ -255,11 +256,12 @@ footer a {
 
 .single-readtime {
   margin-top: .5rem;
+  color: var(--content-secondary);
 }
 
 .single-summary {
-  font-style: italic;
   margin-bottom: 0;
+  color: var(--content-secondary);
 }
 
 .single-content {
