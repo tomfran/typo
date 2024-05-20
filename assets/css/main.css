@@ -4,9 +4,7 @@ html {
 
 body {
   font-family: "Literata";
-  font-size: 1rem;
   color: var(--content-primary);
-  line-height: 1.3rem;
   margin: auto;
   max-width: var(--main-width);
   padding-left: var(--main-padding);
@@ -22,20 +20,20 @@ body {
 h1 {
   margin-top: var(--h1-margin-top);
   margin-bottom: var(--h1-margin-bottom);
-  font-size: 2em;
+  font-size: var(--h1-font-size);
 }
 
 h2 {
   margin-top: var(--h2-margin-top);
   margin-bottom: var(--h2-margin-bottom);
-  font-size: 1.5em;
+  font-size: var(--h2-font-size);
 }
 
 h3,
 h4,
 h5,
 h6 {
-  font-size: 1.2em;
+  font-size: var(--hx-font-size);
   margin-top: var(--hx-margin-top);
   margin-bottom: var(--hx-margin-bottom);
 }
@@ -43,6 +41,8 @@ h6 {
 p {
   margin-top: var(--p-margin-top);
   margin-bottom: var(--p-margin-bottom);
+  font-size: var(--p-font-size);
+  line-height: var(--p-line-height);
 }
 
 ul {
@@ -71,10 +71,15 @@ pre {
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  line-height: 1.3em;
 }
 
 pre::-webkit-scrollbar {
   display: none;
+}
+
+code span {
+  display: inline !important;
 }
 
 code {
@@ -87,6 +92,7 @@ code {
   font-variant-ligatures: contextual;
   font-family: "Monaspace";
   font-size: .9em;
+  line-height: 0;
 }
 
 
@@ -172,8 +178,8 @@ footer a {
 .line-date {
   font-size: small;
   font-family: "Monaspace";
-  min-width: 110px;
-  max-width: 110px;
+  min-width: 120px;
+  max-width: 120px;
   text-align: right;
   padding-right: 1rem;
   margin-top: 0rem;
@@ -279,6 +285,8 @@ footer a {
 /* Table of contents */
 
 .toc {
+  font-size: var(--p-font-size);
+  line-height: calc(.9 * var(--p-line-height));
   margin-top: var(--toc-margin-top);
   margin-bottom: var(--toc-margin-bottom);
 }
@@ -356,7 +364,7 @@ footer a {
 
 .breadcrumbs {
   /* font-family: "Monaspace"; */
-  font-size: small;
+  font-size: .8em;
   margin-bottom: calc(-0.5 * var(--h1-margin-top));
 }
 
