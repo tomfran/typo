@@ -34,25 +34,28 @@
 
 {{ if .Site.Params.homeCollection }}
 
-{{ with .Site.Params.homeCollectionTitle}}
-<h1> {{ . }} </h1>
-{{ end }}
+<div class="list-container">
+    {{ with .Site.Params.homeCollectionTitle}}
+    <h1> {{ . }} </h1>
+    {{ end }}
 
-{{ $pages := where .Site.RegularPages "Section" .Site.Params.homeCollection }}
+    {{ $pages := where .Site.RegularPages "Section" .Site.Params.homeCollection
+    }}
 
-{{ $paginationSize := 1}}
-{{ if (gt .Site.Params.paginationSize 0) }}
-{{ $paginationSize = .Site.Params.paginationSize }}
-{{ end }}
+    {{ $paginationSize := 1}}
+    {{ if (gt .Site.Params.paginationSize 0) }}
+    {{ $paginationSize = .Site.Params.paginationSize }}
+    {{ end }}
 
-{{ $paginator := .Paginate $pages $paginationSize }}
+    {{ $paginator := .Paginate $pages $paginationSize }}
 
-{{ range $index, $page := $paginator.Pages }}
-{{ partial "post-entry.html" $page}}
-{{ end }}
+    {{ range $index, $page := $paginator.Pages }}
+    {{ partial "post-entry.html" $page}}
+    {{ end }}
 
-{{ partial "pagination-controls.html" $paginator}}
+    {{ partial "pagination-controls.html" $paginator}}
 
-{{ end }}
+    {{ end }}
+</div>
 
 {{ end }}
