@@ -201,11 +201,15 @@ footer a {
   color: var(--content-secondary);
 }
 
+.list-container {
+  padding-bottom: 1rem;
+}
+
 .pagination {
   display: flex;
   align-items: center;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   justify-content: center;
 }
 
