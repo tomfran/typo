@@ -7,7 +7,17 @@ homepage = 'https://github.com/tomfran/typo'
 
 demosite = 'https://tomfran.github.io/'
 
-tags = ["responsive", "simple", "clean", "light", "dark", "blog", "minimal"]
+tags = [
+    "responsive",
+    "simple",
+    "clean",
+    "light",
+    "dark",
+    "blog",
+    "minimal",
+    "personal",
+    "portfolio",
+]
 
 features = [
     "responsive",
