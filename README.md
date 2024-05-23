@@ -27,7 +27,7 @@ Typo is a theme backed by simplicity, as you can see in the screenshots below. T
 - [2 Features](#2-features)
 - [3 References](#3-references)
 - [4 Support](#4-support)
-- [5 Future Works](#5-future-works)
+- [5 Known Issues](#5-known-issues)
 
 ---
 
@@ -48,7 +48,6 @@ The SVGs for social icons are taken from [Hugo PaperMod](https://github.com/adit
 
 If you use the theme or found it useful you can support me by leaving a star ⭐ to Typo's Github repository or opening issues and PRs with fixes or new features.
 
-## 5 Future Works
+## 5 Known Issues
 
-- [ ] Bring SEO and [performance metrics](https://pagespeed.web.dev/) to 100% both on mobile and desktop;
-- [ ] Add color palettes.
+- Footer on Safari is slightly bugged, and is placed too far down the page.
