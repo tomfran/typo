@@ -51,6 +51,11 @@
     /* Content */
     --content-height: calc(100vh - var(--footer-height));
 
+    /* Tables */
+    --table-cell-padding: .5rem;
+    --table-margin-top: 1.5rem;
+    --table-margin-bottom: 1.5rem;
+
     /* Theme */
     --content-primary: rgb(36, 36, 36);
     --content-secondary: rgb(117, 117, 117);
