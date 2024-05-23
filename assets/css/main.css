@@ -458,3 +458,16 @@ table code {
   border-radius: 3px;
   padding: 2px;
 }
+
+/* Quotes */
+
+blockquote {
+  margin: 1.5rem;
+  border-left: solid 1px;
+  color: var(--content-secondary);
+}
+
+blockquote p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
