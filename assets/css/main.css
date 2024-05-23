@@ -4,7 +4,6 @@ html {
 
 body {
   font-family: "Literata";
-  color: var(--content-primary);
   margin: auto;
   max-width: var(--main-width);
   padding-left: var(--main-padding);
@@ -421,4 +420,41 @@ figcaption {
   font-size: small;
   margin-bottom: 2rem;
   margin-top: -3rem;
+}
+
+/* Code in paragraphs */
+
+p code {
+  background-color: var(--code-background);
+  border-radius: 3px;
+  padding: 2px;
+}
+
+/* Tables */
+
+table {
+  border-collapse: collapse;
+  margin-top: var(--table-margin-top);
+  margin-bottom: var(--table-margin-bottom);
+  font-size: var(--p-font-size);
+  line-height: var(--p-line-height);
+  color: var(--content-primary);
+}
+
+th,
+td {
+  padding: var(--table-cell-padding);
+  border: 1px solid var(--code-border);
+  text-align: left;
+}
+
+th {
+  background-color: var(--code-background);
+  font-weight: bold;
+}
+
+table code {
+  background-color: var(--code-background);
+  border-radius: 3px;
+  padding: 2px;
 }
