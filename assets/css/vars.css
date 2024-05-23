@@ -3,6 +3,8 @@
     --main-padding: 1.4em;
     --main-padding-bottom: 3rem;
 
+    --caption-padding: calc(.25 * var(--main-padding));
+
     /* header settings */
     --header-top-gap: 2rem;
     --header-bottom-gap: 2rem;
@@ -26,6 +28,7 @@
     --hx-font-size: 1.3em;
     --p-font-size: 1em;
     --p-line-height: 1.5em;
+    --caption-font-size: .8em;
 
     /* List indentation */
     --li-indent: 1.5rem;
@@ -68,6 +71,7 @@
     :root {
         --main-width: 750px;
         --header-top-gap: 1rem;
+        --caption-padding: calc(.25 * var(--main-padding));
     }
 }
 
@@ -75,5 +79,6 @@
     :root {
         --header-top-gap: 1rem;
         --social-icons-bottom-margin: 0rem;
+        --caption-padding: calc(2 * var(--main-padding));
     }
 }
