@@ -51,5 +51,4 @@ If you use the theme or found it useful you can support me by leaving a star ⭐
 ## 5 Future Works
 
 - [ ] Bring SEO and [performance metrics](https://pagespeed.web.dev/) to 100% both on mobile and desktop;
-- [ ] Add color palettes;
-- [ ] Add tables styling.
+- [ ] Add color palettes.
