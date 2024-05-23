@@ -337,7 +337,7 @@ footer a {
   content: counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "\00a0\00a0";
 }
 
-/* light and dark images */
+/* images */
 
 .dark .img-light {
   display: none !important;
@@ -345,6 +345,41 @@ footer a {
 
 .light .img-dark {
   display: none !important;
+}
+
+.img-small div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-small img {
+  scale: 80%;
+}
+
+.img-full div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-full img {
+  width: 100vw !important;
+  max-width: 100vw !important;
+}
+
+.caption-container {
+  display: flex;
+  justify-content: center;
+}
+
+figcaption {
+  color: var(--content-secondary);
+  padding-left: var(--caption-padding);
+  padding-right: var(--caption-padding);
+  font-size: var(--caption-font-size);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* 404 */
