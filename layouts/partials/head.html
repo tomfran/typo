@@ -1,6 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
+{{- if .IsHome -}}
+<meta name="description" content="{{ site.Params.Description }}" />
+{{- else -}}
+<meta name="description" content="{{ .Params.Description }}" />
+{{- end }}
+
 <title>
     {{ if .IsHome }}
     {{ site.Title }}
