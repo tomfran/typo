@@ -35,19 +35,18 @@
   {{ if .Param "showTags" }}
 
   {{ $taxonomy := "tags" }}
-
   {{ with .Param $taxonomy }}
-  {{ $last := sub (. | len) 1 }}
 
   <div class="single-tags">
     {{ range $index, $tag := . }}
     {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
     <span>
-      <a href="{{ .Permalink }}">#{{ $tag | urlize }}</a>
+      <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
     </span>
     {{ end }}
     {{ end }}
   </div>
+
   {{ end }}
   {{ end }}
 
