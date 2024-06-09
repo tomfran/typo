@@ -28,6 +28,7 @@ features = [
     "social-icons",
     "minified-assets",
     "dark-light-images",
+    "color-palettes",
 ]
 
 [author]
