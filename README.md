@@ -36,7 +36,7 @@ You can install Typo in various ways, the [setup wiki](https://github.com/tomfra
 
 ## 2 Features
 
-The theme has various features, such as header auto-numbering, auto dark mode, and dark and light images. 
+The theme has various features, such as header auto-numbering, auto dark mode, color palettes, and dark and light images. 
 Have a look at the [wiki](https://github.com/tomfran/typo/wiki/Features) for a complete overview of the available ones.
 
 ## 3 References
