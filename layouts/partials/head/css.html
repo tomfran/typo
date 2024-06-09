@@ -1,12 +1,26 @@
-{{- $CSS := slice
+{{
+$CSS := slice
 (resources.Get "css/reset.css")
 (resources.Get "css/vars.css")
 (resources.Get "css/utils.css")
 (resources.Get "css/fonts.css")
 (resources.Get "css/main.css")
-(resources.Get "css/custom.css") |
-resources.Concat "assets/combined.css" |
-minify |
-fingerprint }}
+(resources.Get "css/custom.css")
+(resources.Get "css/colors/default.css")
+}}
 
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media="all">
+{{ with .Site.Params.colorPalette }}
+
+{{ $path := printf "css/colors/%s.css" . }}
+{{ $CSS = $CSS | append (resources.Get $path)}}
+
+{{ end }}
+
+{{
+$combined := $CSS
+| resources.Concat "assets/combined.css"
+| minify
+| fingerprint
+}}
+
+<link rel="stylesheet" href="{{ $combined.RelPermalink }}" media="all">
