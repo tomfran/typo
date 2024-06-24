@@ -1,0 +1,39 @@
+{{ if or .NextInSection .PrevInSection }}
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flex">
+
+        <div class="single-pagination-prev">
+            {{ with .PrevInSection }}
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="{{ .Permalink }}">
+                        {{ .Title }}
+                    </a>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+        <div class="single-pagination-next">
+            {{ with .NextInSection }}
+            <div class="single-pagination-container-next">
+                <div class="single-pagination-text">
+                    <a href="{{ .Permalink }}">
+                        {{ .Title }}
+                    </a>
+                </div>
+                <div class="single-pagination-text">→</div>
+            </div>
+            {{ end }}
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+{{ end }}
