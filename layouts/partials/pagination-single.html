@@ -10,7 +10,7 @@
             <div class="single-pagination-container-prev">
                 <div class="single-pagination-text">←</div>
                 <div class="single-pagination-text">
-                    <a href="{{ .Permalink }}">
+                    <a href="{{ .RelPermalink }}">
                         {{ .Title }}
                     </a>
                 </div>
@@ -22,7 +22,7 @@
             {{ with .NextInSection }}
             <div class="single-pagination-container-next">
                 <div class="single-pagination-text">
-                    <a href="{{ .Permalink }}">
+                    <a href="{{ .RelPermalink }}">
                         {{ .Title }}
                     </a>
                 </div>
