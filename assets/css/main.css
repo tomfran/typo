@@ -114,8 +114,10 @@ code {
 }
 
 hr {
-  border: 1px solid var(--content-primary);
-  margin-top: 3rem;
+  border: none;
+  height: 1px;
+  background: var(--content-secondary);
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -259,7 +261,6 @@ footer a {
 }
 
 .single-title {
-  /* margin-top: 1rem; */
   margin-bottom: .5rem;
 }
 
@@ -274,7 +275,7 @@ footer a {
 }
 
 .single-content {
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
 }
 
 .single-tags {
@@ -283,6 +284,56 @@ footer a {
 
 .single-tags span {
   margin-right: .3rem;
+}
+
+/* Single pagination */
+
+.single-pagination {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.single-pagination a {
+  margin-left: .4rem;
+  margin-right: .4rem;
+}
+
+.single-pagination hr {
+  margin: 0;
+}
+
+.single-pagination-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+.single-pagination-prev {
+  min-width: 50%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.single-pagination-next {
+  min-width: 50%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.single-pagination-container-next {
+  display: flex;
+  min-height: 100%;
+  padding: .5rem;
+}
+
+.single-pagination-container-prev {
+  display: flex;
+  min-height: 100%;
+  padding: .5rem;
+  float: right;
 }
 
 /* Table of contents */
@@ -419,7 +470,7 @@ figcaption {
   font-family: "Monaspace";
   font-size: small;
   margin-bottom: 2rem;
-  margin-top: -3rem;
+  /* margin-top: -3rem; */
 }
 
 /* Code in paragraphs */
