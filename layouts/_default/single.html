@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{/* Intro */}}
+{{/* Breadcrumbs */}}
 
 {{ partial "breadcrumbs.html" . }}
 
@@ -59,12 +59,20 @@
   </aside>
   {{ end }}
 
-  {{/* Actual document content */}}
+  {{/* Page content */}}
 
   <div class="single-content">
     {{ .Content }}
     {{ partial "comments.html" . }}
   </div>
+
+  {{/* Next prev controls */}}
+
+  {{ if not (.Param "hidePagination") }}
+  {{ partial "pagination-single.html" . }}
+  {{ end }}
+
+  {{/* Back to top */}}
 
   {{ if not (.Param "hideBackToTop") }}
   <div class="back-to-top">
