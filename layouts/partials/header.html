@@ -1,6 +1,9 @@
 {{/* Header */}}
 
 <div class="header">
+
+    {{ if or (not (.Param "hideHeader")) .IsHome }}
+
     <h1 class="header-title">{{ site.Title }}</h1>
 
     <div class="flex">
@@ -16,5 +19,7 @@
         {{ end }}
         {{ end }}
     </div>
+
+    {{ end }}
 
 </div>
