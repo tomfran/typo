@@ -514,7 +514,9 @@ table code {
 
 blockquote {
   margin: 1.5rem;
-  border-left: solid 1px;
+  margin-left: 0;
+  margin-right: 0;
+  border-left: solid 2px;
   color: var(--content-secondary);
 }
 
