@@ -45,12 +45,6 @@ The SVGs for social icons are taken from [Hugo PaperMod](https://github.com/adit
 
 ## 4 Support
 
-If you use the theme or found it useful you can support me by leaving a star ⭐ to Typo's Github repository or opening issues and PRs with fixes or new features.
+If you use the theme or found it useful you can support me by leaving a star ⭐ to Typo's Github repository.
 
----
-
-**Things to work on**
-
-- Footer on Safari is slightly bugged, and is placed too far down the page;
-- Performance improvement on heavy post pages;
-- Translations.
+Contributions are always welcome, feel free to open issues and PRs with fixes or new features.
