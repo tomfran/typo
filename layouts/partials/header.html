@@ -11,7 +11,7 @@
 
         {{ with site.Params.menu }}
         {{ range . }}
-        <p class="small {{ if eq .url $currentPage.Path }} bold {{end}}">
+        <p class="small {{ if eq .name (lower $currentPage.Name) }} bold {{end}}">
             <a href="{{.url}}">
                 /{{.name }}
             </a>
