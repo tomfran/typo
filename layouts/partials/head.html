@@ -23,3 +23,7 @@
 {{ if hugo.IsProduction }}
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
+
+{{ if .Site.Params.umami.enable }}
+  {{ partial "umami.html" . }}
+{{ end }}
