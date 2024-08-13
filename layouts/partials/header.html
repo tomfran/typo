@@ -11,8 +11,9 @@
 
         {{ with site.Params.menu }}
         {{ range . }}
+      
         <p class="small {{ if eq .name (lower $currentPage.Name) }} bold {{end}}">
-            <a href="{{.url}}">
+            <a href="{{ .url }}" {{ if and (isset . "newTab") .newTab }}target="_blank" rel="noopener noreferrer"{{ end }}>
                 /{{.name }}
             </a>
         </p>
