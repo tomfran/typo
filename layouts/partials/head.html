@@ -1,14 +1,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
+{{ $faviconPath := (.Site.Params.faviconPath | default "" | absURL) }}
+
+<link rel="icon" type="image/ico" href="{{ $faviconPath }}/favicon.ico">
+<link rel="icon" type="image/ico" href="{{ $faviconPath }}/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ $faviconPath }}/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ $faviconPath }}/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ $faviconPath }}/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ $faviconPath }}/apple-touch-icon.png">
+
 {{ with .OutputFormats.Get "rss" -}}
-  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ printf `
+<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
 {{ end }}
 
 {{- if .IsHome -}}
-<meta name="description" content="{{ site.Params.Description }}" />
+<meta name="description" content="{{ site.Params.Description }}"/>
 {{- else -}}
-<meta name="description" content="{{ .Params.Description }}" />
+<meta name="description" content="{{ .Params.Description }}"/>
 {{- end }}
 
 <title>
@@ -19,7 +29,7 @@
     {{ end }}
 </title>
 
-<link rel="canonical" href="{{ .Permalink }}" />
+<link rel="canonical" href="{{ .Permalink }}"/>
 
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
@@ -29,5 +39,5 @@
 {{ end }}
 
 {{ if .Site.Params.umami.enable }}
-  {{ partial "umami.html" . }}
+{{ partial "umami.html" . }}
 {{ end }}
