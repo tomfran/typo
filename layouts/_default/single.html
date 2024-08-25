@@ -2,7 +2,9 @@
 
 {{/* Breadcrumbs */}}
 
+{{ if not .IsHome }}
 {{ partial "breadcrumbs.html" . }}
+{{ end }}
 
 <div {{ if .Param "autonumber" }} class="autonumber" {{ end }}>
 
