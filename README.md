@@ -27,6 +27,7 @@ Typo is a theme backed by simplicity, as you can see in the screenshots below. T
 - [2 Features](#2-features)
 - [3 References](#3-references)
 - [4 Support](#4-support)
+- [5 Typo Users](#5-typo-users)
 
 ---
 
@@ -48,3 +49,7 @@ The SVGs for social icons are taken from [Hugo PaperMod](https://github.com/adit
 If you use the theme or found it useful you can support me by leaving a star ⭐ to Typo's Github repository.
 
 Contributions are always welcome, feel free to open issues and PRs with fixes or new features.
+
+## 5 Typo Users
+
+If you're using Typo for your website, feel free to add your website to [the list](https://github.com/tomfran/typo/blob/main/USERS.md) alongside what you do! 😊
