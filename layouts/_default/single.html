@@ -22,7 +22,7 @@
     <p class="single-readtime">
       {{ with .Date }}
       {{ $dateMachine := . | time.Format "2006-01-02T15:04:05-07:00" }}
-      {{ $dateHuman := . | time.Format ":date_long" }}
+      {{ $dateHuman := . | time.Format (default ":date_long" $.Site.Params.singleDateFormat) }}
       <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
       {{end}}
 
