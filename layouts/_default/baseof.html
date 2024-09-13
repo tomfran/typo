@@ -25,7 +25,14 @@
     </div>
 
     <footer>
-      {{ partial "footer.html" . }}
+      {{ if .Param "showFooterLicense" }}
+      <div>
+        {{ partial "footer-license.html" . }}
+      </div>
+      {{ end }}
+      <div>
+        {{ partial "footer.html" . }}
+      </div>
     </footer>
 
   </body>
