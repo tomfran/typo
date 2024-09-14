@@ -146,7 +146,6 @@ hr {
 footer {
   font-size: small;
   display: flex;
-  flex-direction: column; /* Stack children vertically */
   justify-content: center;
   align-items: center;
   max-height: var(--footer-height);
