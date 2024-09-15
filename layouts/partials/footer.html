@@ -1,4 +1,5 @@
-{{ if .Site.Params.showFooter }}
+{{ $showFooter := default true .Site.Params.showFooter }}
+{{ if $showFooter }}
     {{ if not .Site.Params.footerContent }}
     <p>Powered by
         <a href="https://gohugo.io/">Hugo</a>
