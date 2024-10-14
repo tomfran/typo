@@ -26,6 +26,13 @@
       <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
       {{end}}
 
+      {{ if and (default false (.Param "showLastmod")) (gt .Lastmod .Date) }}
+      {{ $dateMachine := .Lastmod | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .Lastmod | time.Format (default ":date_long" $.Site.Params.singleDateFormat) }}
+      &nbsp; · &nbsp;
+      Updated <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+      {{end}}
+
       {{ if .Param "readTime" }}
       &nbsp; · &nbsp;
       {{ .ReadingTime }} min read
