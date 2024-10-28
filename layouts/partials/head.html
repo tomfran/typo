@@ -29,6 +29,8 @@
 
 <link rel="canonical" href="{{ .Permalink }}"/>
 
+{{ template "_internal/opengraph.html" . }}
+
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
 
