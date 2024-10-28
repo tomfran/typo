@@ -15,5 +15,5 @@
 }
 
 .monospace {
-    font-family: "Monaspace";
+    font-family: var(--font-mono);
 }
