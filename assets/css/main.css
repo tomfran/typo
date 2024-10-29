@@ -141,6 +141,10 @@ hr {
   margin-top: 0;
 }
 
+.header-title a {
+  text-decoration: none;
+}
+
 /* Footer */
 
 footer {
