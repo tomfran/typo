@@ -1,4 +1,4 @@
-![banner](https://raw.githubusercontent.com/tomfran/typo/main/images/banner-light.png)
+![banner](https://raw.githubusercontent.com/tomfran/typo/main/images/banner-light.webp)
 
 # Typo, a Hugo theme.
 
@@ -11,13 +11,13 @@ Typo is a theme backed by simplicity, as you can see in the screenshots below. T
 
 **Homepage**
 
-![1](https://raw.githubusercontent.com/tomfran/typo/main/images/1.png)
+![1](https://raw.githubusercontent.com/tomfran/typo/main/images/1.webp)
 
 **Article**
 
-![2](https://raw.githubusercontent.com/tomfran/typo/main/images/2.png)
+![2](https://raw.githubusercontent.com/tomfran/typo/main/images/2.webp)
 
-![3](https://raw.githubusercontent.com/tomfran/typo/main/images/3.png)
+![3](https://raw.githubusercontent.com/tomfran/typo/main/images/3.webp)
 
 ---
 
