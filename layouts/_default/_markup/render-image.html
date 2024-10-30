@@ -1,5 +1,33 @@
+{{/*
+To get page resources and relative paths to work. Copied as is from default
+hook:
+https://github.com/gohugoio/hugo/blob/89bd02/tpl/tplimpl/embedded/templates/_default/_markup/render-image.html
+*/}}
+{{- $u := urls.Parse .Destination -}}
+{{- $url := $u.String -}}
+{{- if not $u.IsAbs -}}
+  {{- $path := strings.TrimPrefix "./" $u.Path -}}
+  {{- $imgResource := .Page.Scratch.Get "typoNilVariable" -}}
+  {{/* Check if this is a page bundle or standalone page */}}
+  {{- if .PageInner.Resources -}}
+    {{- $imgResource = .PageInner.Resources.Get $path -}}
+  {{- else if (or .PageInner.Parent .PageInner.Parent.Resources) -}}
+    {{- $imgResource = .PageInner.Parent.Resources.Get $path -}}
+  {{- end -}}
+  {{- $imgResource := or $imgResource (resources.Get $path) -}}
+  {{- with $imgResource -}}
+    {{- $url = .RelPermalink -}}
+    {{- with $u.RawQuery -}}
+      {{- $url = printf "%s?%s" $url . -}}
+    {{- end -}}
+    {{- with $u.Fragment -}}
+      {{- $url = printf "%s#%s" $url . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
 {{/* Split URL at # */}}
-{{ $url := .Destination | safeURL }}
+{{ $url = $url | safeURL }}
 {{ $file_name_array := split $url "#" }}
 
 {{/*
@@ -18,7 +46,7 @@ and build the img class string as "img-tag1 img-tag2 ..."
 <figure class="{{ $classes }}">
 
     <div>
-        <img loading="lazy" alt="{{ .Text }}" src=" {{ $url }}">
+        <img loading="lazy" alt="{{ .Text }}" src="{{ $url }}">
     </div>
 
     {{ with .Title }}
