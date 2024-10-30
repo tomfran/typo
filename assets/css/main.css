@@ -129,6 +129,7 @@ hr {
 }
 
 .header p {
+  font-size: small;
   font-family: var(--font-mono);
   margin-top: var(--header-menu-top-gap);
   margin-right: var(--header-menu-side-gap);
