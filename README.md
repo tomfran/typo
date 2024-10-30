@@ -28,6 +28,7 @@ Typo is a theme backed by simplicity, as you can see in the screenshots below. T
 - [3 References](#3-references)
 - [4 Support](#4-support)
 - [5 Typo Users](#5-typo-users)
+- [6 Questions or Ideas?](#6-questions-or-ideas)
 
 ---
 
@@ -53,3 +54,7 @@ Contributions are always welcome, feel free to open issues and PRs with fixes or
 ## 5 Typo Users
 
 If you're using Typo for your website, feel free to add your website to [the list](https://github.com/tomfran/typo/blob/main/USERS.md) alongside what you do! 😊
+
+## 6 Questions or Ideas? 
+
+Use the [discussion tab](https://github.com/tomfran/typo/discussions) to share ideas/tips/questions about Typo or Hugo in general!
