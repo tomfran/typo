@@ -3,6 +3,8 @@
 
 {{ $faviconPath := (.Site.Params.faviconPath | default "" | absURL) }}
 
+{{ template "_internal/opengraph.html" . }}
+
 <link rel="icon" type="image/ico" href="{{ $faviconPath }}/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ $faviconPath }}/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ $faviconPath }}/favicon-32x32.png">
@@ -28,8 +30,6 @@
 </title>
 
 <link rel="canonical" href="{{ .Permalink }}"/>
-
-{{ template "_internal/opengraph.html" . }}
 
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
