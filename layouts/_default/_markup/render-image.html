@@ -5,9 +5,9 @@ https://github.com/gohugoio/hugo/blob/89bd02/tpl/tplimpl/embedded/templates/_def
 */}}
 {{- $u := urls.Parse .Destination -}}
 {{- $url := $u.String -}}
+{{- $imgResource := .Page.Scratch.Get "typoNilVariable" -}}
 {{- if not $u.IsAbs -}}
   {{- $path := strings.TrimPrefix "./" $u.Path -}}
-  {{- $imgResource := .Page.Scratch.Get "typoNilVariable" -}}
   {{/* Check if this is a page bundle or standalone page */}}
   {{- if .PageInner.Resources -}}
     {{- $imgResource = .PageInner.Resources.Get $path -}}
@@ -42,11 +42,12 @@ and build the img class string as "img-tag1 img-tag2 ..."
 {{ $classes = printf "%s img-%s" $classes $tag}}
 {{ end }}
 
+
 {{/* Use the computed classes on the rendered figure */}}
 <figure class="{{ $classes }}">
 
     <div>
-        <img loading="lazy" alt="{{ .Text }}" src="{{ $url }}">
+        <img loading="lazy" alt="{{ .Text }}" src="{{ $url }}" {{ with $imgResource }}width="{{ .Width }}px" height="{{ .Height }}px"{{ end }}>
     </div>
 
     {{ with .Title }}
