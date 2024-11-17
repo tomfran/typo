@@ -37,6 +37,19 @@ h6 {
   margin-bottom: var(--hx-margin-bottom);
 }
 
+.heading {
+  a {
+    text-decoration: none;
+    color: var(--content-secondary);
+    visibility: hidden;
+    font-size: 0.95em;
+  }
+
+  &:hover a {
+    visibility: visible;
+  }
+}
+
 p {
   margin-top: var(--p-margin-top);
   margin-bottom: var(--p-margin-bottom);
