@@ -40,9 +40,11 @@ h6 {
 .heading {
   a {
     text-decoration: none;
+    font-weight: normal;
     color: var(--content-secondary);
     visibility: hidden;
-    font-size: 0.95em;
+    font-size: 0.9em;
+    font-family: var(--font-mono);
   }
 
   &:hover a {
@@ -407,7 +409,7 @@ footer a {
 
 /* images */
 
-figure > div {
+figure>div {
   width: 100%;
   display: flex;
   justify-content: center;

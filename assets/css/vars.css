@@ -53,7 +53,7 @@
 
     /* Content */
     --content-height: calc(100vh - var(--footer-height));
-    --figure-img-max-height: 500px;
+    --figure-img-max-height: 800px;
 
     /* Tables */
     --table-cell-padding: .5rem;
