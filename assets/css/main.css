@@ -394,6 +394,20 @@ footer a {
 
 /* images */
 
+figure > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+figure img {
+  max-width: 100%;
+  max-height: var(--figure-img-max-height);
+  width: auto;
+  height: auto;
+  margin-inline: auto;
+}
+
 .dark .img-light {
   display: none !important;
 }
@@ -419,6 +433,7 @@ footer a {
 }
 
 .img-full img {
+  height: auto;
   width: 100vw !important;
   max-width: 100vw !important;
 }
