@@ -1,5 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
+defaultContentLanguage = 'en-us'
 title = 'typo'
 
 [module]

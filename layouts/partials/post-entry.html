@@ -5,7 +5,7 @@
     {{ $dateFormat = .}}
     {{ end }}
 
-    <p class="line-date">{{ .Date.Format $dateFormat }} </p>
+    <p class="line-date">{{ .Date | time.Format $dateFormat }} </p>
 
     <div>
         <p class="line-title">
