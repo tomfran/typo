@@ -27,7 +27,11 @@
     <footer>
       {{ partial "footer.html" . }}
     </footer>
-    
+
+    {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+    {{ end }}
+
   </body>
 
   <script>
