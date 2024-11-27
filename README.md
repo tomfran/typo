@@ -43,7 +43,7 @@ Have a look at the [wiki](https://github.com/tomfran/typo/wiki/Features) for a c
 
 ## 3 References
 
-The SVGs for social icons are taken from [Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod).
+The SVGs for social icons are taken from [Simple Icons](https://github.com/simple-icons/simple-icons).
 
 ## 4 Support
 
