@@ -51,6 +51,8 @@ If you use the theme or found it useful you can support me by leaving a star ⭐
 
 Contributions are always welcome, feel free to open issues and PRs with fixes or new features.
 
+Also make sure to update the [Wiki](https://github.com/tomfran/typo-wiki) when introducing a new feature.
+
 ## 5 Typo Users
 
 If you're using Typo for your website, feel free to add your website to [the list](https://github.com/tomfran/typo/blob/main/USERS.md) alongside what you do! 😊
