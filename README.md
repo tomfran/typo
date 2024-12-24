@@ -4,7 +4,7 @@
 
 Typo is a theme backed by simplicity, as you can see in the screenshots below. The goal was to have a website centered around content and nothing more.
 
-[![wiki](https://img.shields.io/badge/doc-wiki-orange)](https://github.com/tomfran/typo/wiki)
+[![wiki](https://img.shields.io/badge/doc-wiki-orange)](https://tomfran.github.io/typo-wiki/)
 [![hugo-typo](https://img.shields.io/badge/hugo_themes-@typo-red)](https://themes.gohugo.io/themes/typo/)
 [![GitHub Release](https://img.shields.io/github/v/release/tomfran/typo)](https://github.com/tomfran/typo/releases/latest)
 [![last-commit](https://img.shields.io/github/last-commit/tomfran/typo)](https://github.com/tomfran/typo/commits/)
@@ -34,12 +34,12 @@ Typo is a theme backed by simplicity, as you can see in the screenshots below. T
 
 ## 1 Setup
 
-You can install Typo in various ways, the [setup wiki](https://github.com/tomfran/typo/wiki/Setup) page highlights how to do so.
+You can install Typo in various ways, the [setup wiki](https://tomfran.github.io/typo-wiki/setup) page highlights how to do so.
 
 ## 2 Features
 
 The theme has various features, such as header auto-numbering, auto dark mode, color palettes, and dark and light images. 
-Have a look at the [wiki](https://github.com/tomfran/typo/wiki/Features) for a complete overview of the available ones.
+Have a look at the [wiki](https://tomfran.github.io/typo-wiki/features) for a complete overview of the available ones.
 
 ## 3 References
 
