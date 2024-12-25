@@ -65,8 +65,8 @@
 
   <div class="single-content">
     {{ .Content }}
-    {{ if not .Params.disableComment }}
     {{ if .Site.Params.giscus.enable }}
+    {{ if not .Params.disableComment }}
     {{ partial "comments.html" . }}
     {{ end }}
     {{ end }}
