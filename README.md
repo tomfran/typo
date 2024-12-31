@@ -28,7 +28,7 @@ Typo is a theme backed by simplicity, as you can see in the screenshots below. T
 - [3 References](#3-references)
 - [4 Support](#4-support)
 - [5 Typo Users](#5-typo-users)
-- [6 Questions or Ideas?](#6-questions-or-ideas)
+- [6 Questions or ideas?](#6-questions-or-ideas)
 
 ---
 
@@ -58,6 +58,6 @@ Also make sure to update the [Wiki](https://github.com/tomfran/typo-wiki) when i
 
 If you're using Typo for your website, feel free to add your website to [the list](https://github.com/tomfran/typo/blob/main/USERS.md) alongside what you do! 😊
 
-## 6 Questions or Ideas? 
+## 6 Questions or ideas? 
 
 Use the [discussion tab](https://github.com/tomfran/typo/discussions) to share ideas/tips/questions about Typo or Hugo in general!
