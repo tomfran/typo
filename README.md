@@ -44,6 +44,7 @@ Have a look at the [wiki](https://tomfran.github.io/typo-wiki/features) for a co
 ## 3 References
 
 The SVGs for social icons are taken from [Simple Icons](https://github.com/simple-icons/simple-icons).
+Every SVG present on the website is usable on the theme.
 
 ## 4 Support
 
