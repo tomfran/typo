@@ -58,7 +58,6 @@ websiteId = "unique-website-id"
 jsLocation = "http://example.org/umami.js"
 ```
 
-
 ## Favicons
 
 The following favicons are included in the head of the website: 
@@ -80,3 +79,7 @@ faviconPath = 'your-path'
 
 You can easily generate favicons using [this website](https://realfavicongenerator.net/) starting from your image.
 [Here](https://github.com/tomfran/tomfran.github.io/tree/main/static) you can see an example of icons overriding default ones.
+
+## Mermaid Diagrams
+
+Mermaid diagrams are supported by theme, just follow [this reference](https://gohugo.io/content-management/diagrams/#mermaid-diagrams) to use them.
