@@ -47,6 +47,13 @@ theme = "preferred_color_scheme"
 
 Tip: use `preferred_color_scheme` theme to have a consistent dark and light appearance.
 
+You can decide to hide the comments section on certain pages, using the following parameter on the page itself:
+
+```md
+disableComment: true
+```
+
+
 ## Umami
 
 You can include [Umami](https://umami.is/) in your website as follows: 
