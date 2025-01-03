@@ -34,6 +34,27 @@ git submodule add --depth=1 https://github.com/tomfran/typo.git themes/typo
 git submodule update --init --recursive
 ```
 
+**Hugo module**
+
+Installing Typo as a Hugo module requires Go to be installed in your development environment.
+
+```bash
+# Initialize your project as a Hugo module
+hugo mod init <module_name>
+# Install the theme
+hugo mod get github.com/tomfran/typo
+```
+
+Then add the following to `hugo.toml`:
+
+```toml
+[module]
+[[module.imports]]
+path = "github.com/tomfran/typo"
+```
+
+Finally, remove the `theme = 'typo'` parameter from `hugo.toml`.
+
 **Cloning**
 
 ```bash
