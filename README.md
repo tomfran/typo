@@ -19,43 +19,27 @@ Typo is a theme backed by simplicity, as you can see in the screenshots below. T
 
 ![3](https://raw.githubusercontent.com/tomfran/typo/main/images/3.webp)
 
----
+## 1 Wiki
 
-**Table of content**
+Typo's [Wiki](https://tomfran.github.io/typo-wiki/) is the place to find instructions on how to [setup](https://tomfran.github.io/typo-wiki/setup) the theme and an overview of the available [features](https://tomfran.github.io/typo-wiki/features). 
 
-- [1 Setup](#1-setup)
-- [2 Features](#2-features)
-- [3 References](#3-references)
-- [4 Support](#4-support)
-- [5 Typo Users](#5-typo-users)
-- [6 Questions or ideas?](#6-questions-or-ideas)
+Some of the most relevant are: heading auto-numbering, dark mode, color palettes, dark and light images, comments, etc.
 
----
-
-## 1 Setup
-
-You can install Typo in various ways, the [setup wiki](https://tomfran.github.io/typo-wiki/setup) page highlights how to do so.
-
-## 2 Features
-
-The theme has various features, such as header auto-numbering, auto dark mode, color palettes, and dark and light images. 
-Have a look at the [wiki](https://tomfran.github.io/typo-wiki/features) for a complete overview of the available ones.
-
-## 3 References
-
-The SVGs for social icons are taken from [Simple Icons](https://github.com/simple-icons/simple-icons).
-Every SVG present on the website is usable on the theme.
-
-## 4 Support
+## 2 Support
 
 If you use the theme or found it useful you can support me by leaving a star ⭐ to Typo's Github repository.
 
-Contributions are always welcome, feel free to open issues and PRs with fixes or new features.
+[Contributions](https://github.com/tomfran/typo/blob/main/CONTRIBUTING.md) are always welcome, feel free to open issues and PRs with fixes or new features.
 
-## 5 Typo Users
+## 3 Typo Users
 
 If you're using Typo for your website, feel free to add your website to [the list](https://github.com/tomfran/typo/blob/main/USERS.md) alongside what you do! 😊
 
-## 6 Questions or ideas? 
+## 4 Questions or ideas? 
 
 Use the [discussion tab](https://github.com/tomfran/typo/discussions) to share ideas/tips/questions about Typo or Hugo in general!
+
+## 5 References
+
+The SVGs for social icons are taken from [Simple Icons](https://github.com/simple-icons/simple-icons).
+Every SVG present on the website is usable on the theme.
