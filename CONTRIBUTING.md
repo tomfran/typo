@@ -10,7 +10,7 @@ To avoid unnecessary work, please start a discussion or open an issue with a pro
 Any other reasonable changes are more than welcome, keep in mind the guidelines: 
 - keep the code as minimal as possible, and avoid comments in the code unless needed;
 - keep the parameters (e.g. in hugo.toml) as concise and clear as possible;
-- update the wiki if needed, trying to maintain the current style of writing;
+- update the [wiki](https://github.com/tomfran/typo/tree/main/wiki) if needed, trying to maintain the current style of writing;
 - refrain from breaking existing behavior, for example, make a new feature disabled by default.
 
 <br>
