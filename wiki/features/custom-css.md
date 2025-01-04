@@ -13,7 +13,7 @@ hideBackToTop: true
 
 The theme supports custom css, you can override anything you want by redefining classes in the `assets/custom.css` file.
 
-For instance, changing the main widht can be done as follows: 
+For instance, changing the main width can be done as follows: 
 
 ```css
 :root {

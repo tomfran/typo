@@ -73,7 +73,7 @@ hidePagination: true
 
 ## Meta Description
 
-You can speficy the post meta description as follows: 
+You can specify the post meta description as follows: 
 
 ```md
 description: "Your Description"

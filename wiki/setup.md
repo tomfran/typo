@@ -143,7 +143,7 @@ url = "/posts"
 name = "about"
 url = "/about"
 
-# Syntax highligth on code blocks
+# Syntax highlight on code blocks
 [markup]
 [markup.highlight]
 style = 'algol'
