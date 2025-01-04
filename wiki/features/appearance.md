@@ -27,7 +27,7 @@ Typo has the possibility to specify the color palette to use in the theme. The d
 but they can easily be added. 
 
 The color palettes are stored under `assets/css/colors/*` and the one in use can be specified with the following 
-patameter: 
+parameter: 
 
 ```toml
 [params]
@@ -60,7 +60,7 @@ You can choose to hide the header on every page apart from the homepage with thi
 hideHeader = true
 ```
 
-I strongly reccoment enabling [breadcrumbs](#72-breadcrumbs) if you do so.
+I strongly recommend enabling [breadcrumbs](#72-breadcrumbs) if you do so.
 
 ## Note on Syntax Highlighting
 
@@ -75,7 +75,7 @@ style = 'algol'
 
 ## Footer Customization
 
-One can decide to hide the footer completely or to change it's content by specifiying the following parameters.
+One can decide to hide the footer completely or to change it's content by specifying the following parameters.
 Note that if you don't include the following parameters (or leave footerContent empty) the default footer is shown.
 
 ```toml

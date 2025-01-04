@@ -14,7 +14,7 @@ Miscellaneous settings.
 
 ## Home Meta Description
 
-You can specify the homepage meta description with the following paramer:
+You can specify the homepage meta description with the following parameter:
 
 ```toml
 [params]

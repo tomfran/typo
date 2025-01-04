@@ -22,7 +22,7 @@ name = "posts"
 url = "/posts"
 ```
 
-There exists an optional new tab parameter, to choose wether menu items are opened in a new tab or not. 
+There exists an optional new tab parameter, to choose whether menu items are opened in a new tab or not. 
 
 ```toml
 [[params.menu]]
