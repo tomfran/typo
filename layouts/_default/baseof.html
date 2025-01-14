@@ -2,39 +2,39 @@
 <html lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
   dir="{{ or site.Language.LanguageDirection `ltr` }}">
 
-  <head>
-    {{ partial "head.html" . }}
-  </head>
+<head>
+  {{ partial "head.html" . }}
+</head>
 
-  {{ $theme := "auto"}}
+{{ $theme := "auto"}}
 
-  {{ with .Param "theme" }}
-  {{ $theme = .}}
+{{ with .Param "theme" }}
+{{ $theme = .}}
+{{ end }}
+
+<body class="{{ $theme }}">
+
+  <div class="content">
+    <header>
+      {{ partial "header.html" . }}
+    </header>
+
+    <main class="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </div>
+
+  <footer>
+    {{ partial "footer.html" . }}
+  </footer>
+
+  {{ if .Param "math" }}
+  {{ partialCached "math.html" . }}
   {{ end }}
 
-  <body class="{{ $theme }}">
+</body>
 
-    <div class="content">
-      <header>
-        {{ partial "header.html" . }}
-      </header>
-
-      <main class="main">
-        {{ block "main" . }}{{ end }}
-      </main>
-    </div>
-
-    <footer>
-      {{ partial "footer.html" . }}
-    </footer>
-
-    {{ if .Param "math" }}
-    {{ partialCached "math.html" . }}
-    {{ end }}
-
-  </body>
-
-  <script>
+<script>
 
   function isAuto() {
     return document.body.classList.contains("auto");
@@ -67,4 +67,5 @@
 
 </script>
 
+<script defer src="{{ "js/copy-code.js" | relURL }}"></script>
 </html>
