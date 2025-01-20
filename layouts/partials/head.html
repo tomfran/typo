@@ -19,6 +19,10 @@
 <meta name="description" content="{{ .Params.Description }}"/>
 {{- end }}
 
+{{ if .Param "fediverse" }}
+<meta property="fediverse:creator" content="{{ .Params.Fediverse }}">
+{{ end }}
+
 <title>
     {{ if .IsHome }}
     {{ site.Title }}
