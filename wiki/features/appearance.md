@@ -40,7 +40,12 @@ This is the complete list of palettes available:
 - default;
 - catpuccin;
 - gruvebox;
-- eink.
+- eink;
+- base16-default;
+- base16-eighties;
+- base16-ocean;
+- base16-mocha;
+- base16-cupcake.
 
 More are to come. 
 
