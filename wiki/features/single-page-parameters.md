@@ -87,3 +87,12 @@ You can decide the date format to apply to single posts by setting the following
 [params]
 singleDateFormat = '2 January 2006'
 ```
+
+## Fediverse
+
+You can include a [fediverse handle](https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/) in your posts.
+
+```toml
+[params]
+fediverse: "@username@instance.url"
+```
