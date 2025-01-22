@@ -40,7 +40,8 @@ This is the complete list of palettes available:
 - default;
 - catpuccin;
 - gruvebox;
-- eink.
+- eink;
+- spacegray.
 
 More are to come. 
 
