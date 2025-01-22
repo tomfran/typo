@@ -1,21 +1,15 @@
-/*
-Based on colors sourced from:
-https://github.com/chriskempson/base16-default-schemes/blob/master/default-dark.yaml
-o7 chriskempson, my heart goes out to thee
-*/
-
 :root {
-    --content-primary: rgb(24, 24, 24); /*base00*/
-    --content-secondary: rgb(88, 88, 88); /*base03*/
-    --background: rgb(248, 248, 248); /*base07*/
-    --code-background: rgb(232, 232, 232); /*base06*/
-    --code-border: rgb(216, 216, 216); /*base05*/
+    --content-primary: rgb(24, 24, 24);
+    --content-secondary: rgb(88, 88, 88);
+    --background: rgb(248, 248, 248);
+    --code-background: rgb(232, 232, 232);
+    --code-border: rgb(216, 216, 216);
 }
 
 .dark {
-    --content-primary: rgb(248, 248, 248); /*base07*/
-    --content-secondary: rgb(184, 184, 184); /*base04*/
-    --background: rgb(24, 24, 24); /*base00*/
-    --code-background: rgb(40, 40, 40); /*base01*/
-    --code-border: rgb(56, 56, 56); /*base02*/
+    --content-primary: rgb(248, 248, 248);
+    --content-secondary: rgb(184, 184, 184);
+    --background: rgb(24, 24, 24);
+    --code-background: rgb(40, 40, 40);
+    --code-border: rgb(56, 56, 56);
 }
