@@ -41,7 +41,7 @@ This is the complete list of palettes available:
 - catpuccin;
 - gruvebox;
 - eink;
-- spacegray.
+- base16-default.
 
 More are to come. 
 
