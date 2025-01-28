@@ -83,11 +83,11 @@ languageCode = 'en-us'
 title = 'My website'
 theme = 'typo'
 
-[taxonomies]
-tag = 'tags'
-
 # Google analytics code
 googleAnalytics = "G-xxxxxxxxx"
+
+[taxonomies]
+tag = 'tags'
 
 [params]
 # Meta description
