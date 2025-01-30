@@ -69,7 +69,7 @@ jsLocation = "http://example.org/umami.js"
 
 The following favicons are included in the head of the website: 
 - `favicon.ico`
-- `favicon-16xng`
+- `favicon-16x16.png`
 - `favicon-32x32.png`
 - `android-chrome-192x192.png`
 - `apple-touch-icon.png`

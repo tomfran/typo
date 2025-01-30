@@ -79,6 +79,14 @@ You can specify the post meta description as follows:
 description: "Your Description"
 ```
 
+## Fediverse
+
+You can include a [fediverse handle](https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/) in your posts.
+
+```md
+fediverse: "@username@instance.url"
+```
+
 ## Date Format
 
 You can decide the date format to apply to single posts by setting the following param in the toml file: 
@@ -86,13 +94,4 @@ You can decide the date format to apply to single posts by setting the following
 ```toml
 [params]
 singleDateFormat = '2 January 2006'
-```
-
-## Fediverse
-
-You can include a [fediverse handle](https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/) in your posts.
-
-```toml
-[params]
-fediverse: "@username@instance.url"
 ```
