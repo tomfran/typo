@@ -38,7 +38,7 @@ h6 {
 }
 
 .heading {
-  a {
+  .anchor {
     text-decoration: none;
     font-weight: normal;
     color: var(--content-secondary);
@@ -47,7 +47,7 @@ h6 {
     font-family: var(--font-mono);
   }
 
-  &:hover a {
+  &:hover .anchor {
     visibility: visible;
   }
 }
