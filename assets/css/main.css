@@ -457,7 +457,13 @@ figure img {
 }
 
 .img-small img {
-  scale: 80%;
+  max-height: calc(var(--figure-img-max-height) * 0.8);
+}
+
+.img-small div:first-child {
+  height: 80%;
+  width: 80%;
+  margin: auto;
 }
 
 .img-full div {
