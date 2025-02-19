@@ -512,8 +512,14 @@ figcaption {
 /* breadcrumbs */
 
 .breadcrumbs {
-  font-size: .8em;
+  font-size: small;
   margin-bottom: calc(-0.5 * var(--h1-margin-top));
+  font-family: var(--font-mono);
+}
+
+.breadcrumbs span {
+  margin-right: -5px;
+  margin-left: -5px;
 }
 
 /* Comments */

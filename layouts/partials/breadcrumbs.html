@@ -2,7 +2,7 @@
 <div class="breadcrumbs">
     {{ range .Ancestors.Reverse }}
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    <span class="breadcrumbs-separator"> > </span>
+    <span class="breadcrumbs-separator"> / </span>
     {{ end }}
     <a class="breadcrumbs-current" href="{{ .RelPermalink }}">{{ .Title }}</a>
 </div>
