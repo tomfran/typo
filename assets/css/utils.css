@@ -1,5 +1,6 @@
 .flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .bold {
