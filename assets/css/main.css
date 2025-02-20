@@ -59,13 +59,20 @@ p {
   line-height: var(--p-line-height);
 }
 
-ul {
-  margin-top: var(--ul-margin-top);
-  margin-bottom: var(--ul-margin-bottom);
+li {
+  margin-top: var(--li-margin-top);
+  margin-bottom: var(--li-margin-bottom);
 }
 
-li {
-  margin-left: var(--li-indent);
+ul, ol {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+/* apply margins to non-nested lists */
+ul:not(li ul), ol:not(li ol) {
+  margin-top: var(--ul-ol-margin-top);
+  margin-bottom: var(--ul-ol-margin-bottom);
 }
 
 a {
