@@ -70,6 +70,11 @@ li {
 
 a {
   text-decoration: underline;
+  color: var(--content-primary) !important;
+}
+
+a:hover {
+  color: var(--content-secondary) !important;
 }
 
 /* Code blocks */
