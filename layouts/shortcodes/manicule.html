@@ -1,0 +1,4 @@
+{{/* Available manicule types: up down left right */}}
+{{- $maniculeType := .Get 0 | default "up" -}}
+
+<span class="manicule {{ $maniculeType }}" {{ if len .Params | eq 2 }} id="{{ .Get 1 }}" {{ end }}>&nbsp;{{ printf "assets/manicule/default.svg" | readFile | safeHTML }}&nbsp;</span>

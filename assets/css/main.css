@@ -583,3 +583,28 @@ blockquote p {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
+span.manicule {
+  display: inline-flex;
+}
+
+.manicule svg {
+  height: 1em;
+  width: .7em;
+  transform: translate(0, .1em) scale(1.15);
+  fill: var(--content-primary);
+}
+
+.manicule.down svg {
+  transform: translate(0, .2em) scale(1.15) rotate(180deg);
+}
+
+.manicule.right svg {
+  transform: translate(0, .2em) scale(1.15) rotate(90deg);
+  width: 1em;
+}
+
+.manicule.left svg {
+  transform: translate(0, .2em) scale(-1.15, 1.15) rotate(90deg);
+  width: 1em;
+}
