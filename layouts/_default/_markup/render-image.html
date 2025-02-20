@@ -4,31 +4,31 @@ hook:
 https://github.com/gohugoio/hugo/blob/89bd02/tpl/tplimpl/embedded/templates/_default/_markup/render-image.html
 */}}
 {{- $u := urls.Parse .Destination -}}
-{{- $url := $u.String -}}
+{{- $src := $u.String -}}
 {{- $imgResource := .Page.Scratch.Get "typoNilVariable" -}}
 {{- if not $u.IsAbs -}}
   {{- $path := strings.TrimPrefix "./" $u.Path -}}
-  {{/* Check if this is a page bundle or standalone page */}}
-  {{- if .PageInner.Resources -}}
-    {{- $imgResource = .PageInner.Resources.Get $path -}}
-  {{- else if (or .PageInner.Parent .PageInner.Parent.Resources) -}}
-    {{- $imgResource = .PageInner.Parent.Resources.Get $path -}}
-  {{- end -}}
-  {{- $imgResource := or $imgResource (resources.Get $path) -}}
+  {{- $imgResource = or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
   {{- with $imgResource -}}
-    {{- $url = .RelPermalink -}}
+    {{- $src = .RelPermalink -}}
     {{- with $u.RawQuery -}}
-      {{- $url = printf "%s?%s" $url . -}}
+      {{- $src = printf "%s?%s" $src . -}}
     {{- end -}}
     {{- with $u.Fragment -}}
-      {{- $url = printf "%s#%s" $url . -}}
+      {{- $src = printf "%s#%s" $src . -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
 
 {{/* Split URL at # */}}
-{{ $url = $url | safeURL }}
+{{ $url := $src | safeURL }}
 {{ $file_name_array := split $url "#" }}
+
+{{/* If the image URL starts with http:// or https:// it is not an internal resource */}}
+{{ $is_internal_resource := true }}
+{{if gt (len (findRE `^http.://` $url)) 0 }}
+  {{ $is_internal_resource = false }}
+{{end}}
 
 {{/*
 Iterate over all tags, which are in pos 1 to len array - 1,
@@ -43,11 +43,51 @@ and build the img class string as "img-tag1 img-tag2 ..."
 {{ end }}
 
 
+{{ $no_svg := false }}
+{{- with $imgResource -}}
+  {{ if (ne $imgResource.MediaType.SubType "svg") }}
+    {{/* if it's _not_ an SVG image, we can convert to webp and resize */}}
+    {{ $no_svg = true }}
+    {{ if and (not (strings.Contains $classes "img-noresize")) (strings.Contains $classes "img-nowebp") }}
+      {{ $imgResource = $imgResource.Resize "720x Lanczos" }}
+    {{ end }}
+    {{ if and (strings.Contains $classes "img-noresize") (not (strings.Contains $classes "img-nowebp")) }}
+      {{ $imgResource = $imgResource.Resize (printf "%dx%d webp q75 Lanczos" .Width .Height)  }}
+    {{ end }}
+    {{ if and (not (strings.Contains $classes "img-noresize")) (not (strings.Contains $classes "img-nowebp")) }}
+      {{ $imgResource = $imgResource.Resize "720x webp q75 Lanczos" }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* If it's the first image, we want to default to "eager" loading, all others will be "lazy" */}}
+{{- $first_image := false -}}
+{{- if not ($.Page.Scratch.Get "not-first-image-flag") -}}
+  {{- $first_image = true -}}
+  {{- $.Page.Scratch.Set "not-first-image-flag" true -}}
+{{- end -}}
+
+{{/* User-set tags can override the default loading scheme */}}
+{{ $loading := "lazy" }}
+{{ if or (strings.Contains $classes "img-eager") (and $first_image (not (strings.Contains $classes "img-lazy"))) }}
+  {{ $loading = "eager" }}
+{{ end }}
+
+{{/* The above transformations are incorporated in the $imgResource */}}
+{{ $source := $url }}
+{{ if $is_internal_resource }}
+  {{ $source = $imgResource.RelPermalink }}
+{{ end }}
+
 {{/* Use the computed classes on the rendered figure */}}
 <figure class="{{ $classes }}">
 
     <div>
-        <img loading="lazy" alt="{{ .Text }}" src="{{ $url }}" {{ with $imgResource }}width="{{ .Width }}px" height="{{ .Height }}px"{{ end }}>
+      {{ if $no_svg }}
+    <img loading={{ $loading }} alt="{{ .Text }}" src="{{ $source }}" width={{ $imgResource.Width }} height={{ $imgResource.Height }} style="width: {{ $imgResource.Width }}px; height: auto;">
+      {{ else }}
+      <img loading={{ $loading }} alt="{{ .Text }}" src="{{ $source }}">
+      {{ end }}
     </div>
 
     {{ with .Title }}
