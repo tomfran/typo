@@ -73,12 +73,16 @@
   </div>
 
   {{ if .Store.Get "hasMermaid" }}
-  <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true });
+  {{ $mermaidDarkTheme := default "dark" (or .Params.mermaidDarkTheme .Site.Params.mermaidDarkTheme) }}
+  {{ $mermaidTheme := default "default" (or .Params.mermaidTheme .Site.Params.mermaidTheme) }}
+  <script defer
+    type="module"
+    id="mermaid_script"
+    data-light-theme="{{ $mermaidTheme }}"
+    data-dark-theme="{{ $mermaidDarkTheme }}"
+    src='{{ "js/mermaid.js" | relURL }}'>
   </script>
   {{ end }}
-
 
   {{/* Next prev controls */}}
 

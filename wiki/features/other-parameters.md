@@ -89,4 +89,10 @@ You can easily generate favicons using [this website](https://realfavicongenerat
 
 ## Mermaid Diagrams
 
-Mermaid diagrams are supported by theme, just follow [this reference](https://gohugo.io/content-management/diagrams/#mermaid-diagrams) to use them.
+Mermaid diagrams are supported, just follow [this reference](https://gohugo.io/content-management/diagrams/#mermaid-diagrams) to use them. You can set Mermaid's light- and dark themes in your config; they switch with your blog's light/dark state. These are the defaults:
+
+```toml
+[params]
+mermaidTheme = "default"
+mermaidDarkTheme = "dark"
+```
