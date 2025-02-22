@@ -100,7 +100,7 @@ pre {
   border-radius: var(--code-border-radius);
   margin-top: var(--code-margin-top);
   margin-bottom: var(--code-margin-bottom);
-  background-color: var(--code-background) !important;
+  background-color: var(--code-background);
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
