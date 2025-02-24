@@ -69,14 +69,21 @@ I strongly recommend enabling [breadcrumbs](#72-breadcrumbs) if you do so.
 
 ## Note on Syntax Highlighting
 
-Some color schemes seems to be broken using this theme, for instance, the default one, Monokai, is not well displayed, as pointed out in [this issue](https://github.com/tomfran/typo/issues/17).
-I suggest to try [color schemes](https://xyproto.github.io/splash/docs/all.html) and see what can work for you.
+The theme supports syntax highlighting, and you can specify the theme as follows: 
 
 ```toml
 [markup]
 [markup.highlight]
 style = 'algol'
 ```
+
+`algol` is the recommended theme, and for it to work, the background-color of the code 
+elements is enforced.
+This has the side effect of breaking other color schemes, e.g. Monokai. 
+
+You can make them work by removing `!important` from the background color of the code pre elements.
+
+I suggest trying [color schemes](https://xyproto.github.io/splash/docs/all.html) and see what can work for you.
 
 ## Footer Customization
 
