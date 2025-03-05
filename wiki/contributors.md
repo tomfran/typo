@@ -12,10 +12,14 @@ hidePagination: true
 hideBackToTop: false
 ---
 
-The theme has accumulated <span id="star-count">over 300</span> stars on Github, and 
-currently counts <span id="contributors-count">over 20</span> contributors:
+<div id="loading-message">Fetching GitHub data, hang tight!</div>
 
-<ul id="contributors-list" style="list-style-type: none; padding: 0; margin-top: 2rem"></ul>
+<div id="content" style="display: none;">
+  The theme has accumulated <span id="star-count">over 300</span> stars on Github, and 
+  currently counts <span id="contributors-count">over 20</span> contributors:
+
+  <ul id="contributors-list" style="list-style-type: none; padding: 0; margin-top: 2rem"></ul>
+</div>
 
 <script>
   async function fetchGitHubData() {
@@ -58,6 +62,9 @@ currently counts <span id="contributors-count">over 20</span> contributors:
   }
 
   function updateUI(starCount, contributors) {
+    document.getElementById("loading-message").style.display = "none";
+    document.getElementById("content").style.display = "block";
+    
     document.getElementById("star-count").textContent = `${starCount}`;
     document.getElementById("contributors-count").textContent = `${contributors.length}`;
 
