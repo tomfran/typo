@@ -6,3 +6,4 @@
 - https://as215887.net, **Serhiy Bobrov**, Personal Autonomous System
 - https://smdp26.github.io/, **Soumyadeep Paul**, PhD
 - https://aadityathapa.github.io/, **Aaditya Thapa**, Data Analyst
+- https://automagic.blog, **Sangeeth Sudheer**, UX Engineer
