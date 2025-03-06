@@ -59,17 +59,29 @@ p {
   line-height: var(--p-line-height);
 }
 
-ul {
-  margin-top: var(--ul-margin-top);
-  margin-bottom: var(--ul-margin-bottom);
-}
-
 li {
   margin-left: var(--li-indent);
+
+  &:has(> input[type="checkbox"]) {
+    list-style-type: none;
+  }
+
+  & > input[type="checkbox"] {
+    width: var(--li-checkbox-size);
+    height: var(--li-checkbox-size);
+    margin: 0 0.2em 0.15em -1.25em;
+    vertical-align: middle;
+  }
 }
 
 a {
   text-decoration: underline;
+}
+
+input {
+  .dark & {
+    color-scheme: dark;
+  }
 }
 
 /* Code blocks */

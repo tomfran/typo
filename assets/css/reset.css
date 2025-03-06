@@ -64,7 +64,7 @@ p {
     margin-bottom: 0;
 }
 
-ul {
+ul, ol {
     padding: 0;
 }
 
