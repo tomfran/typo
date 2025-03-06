@@ -33,10 +33,13 @@
     --p-line-height: 1.5em;
     --caption-font-size: .8em;
 
-    /* List indentation */
-    --li-indent: 1.5rem;
+    /* Lists */
+    --li-indent: 2rem;
     --ul-margin-top: 1rem;
     --ul-margin-bottom: 1rem;
+    --li-checkbox-size: 0.8em;
+
+    /* TOC */
 
     --toc-margin-top: 2rem;
     --toc-margin-bottom: 3rem;
