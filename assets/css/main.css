@@ -5,7 +5,7 @@ html {
 body {
   font-family: var(--font-body);
   margin: auto;
-  max-width: var(--main-width);
+  max-width: calc(var(--main-width) + 2 * var(--main-padding));
   padding-left: var(--main-padding);
   padding-right: var(--main-padding);
   color: var(--content-primary);
