@@ -25,10 +25,20 @@ description = "Your description"
 
 Show breadcrumbs on pages.
 
+Example:
+
 ```toml
-[params]
-breadcrumbs = true
+[params.breadcrumbs]
+enabled = true
+showCurrentPage = true
+home = "~"
 ```
+
+Set `enabled` to `false` if you want to hide breadcrumbs. By default, breadcrumbs are shown.
+
+Set `showCurrentPage` to `false` to hide the last crumb, i.e, the current page.
+
+`home` when set with a non-empty string, uses the latter as the first crumb instead of the string "Home".
 
 ## Comments
 

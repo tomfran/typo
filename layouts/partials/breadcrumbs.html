@@ -1,9 +1,23 @@
-{{ if .Site.Params.breadcrumbs }}
+{{- if .Site.Params.breadcrumbs.enabled -}}
+{{- $breadcrumbs := .Site.Params.breadcrumbs -}}
 <div class="breadcrumbs">
-    {{ range .Ancestors.Reverse }}
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    <span class="breadcrumbs-separator"> / </span>
-    {{ end }}
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- range $i, $v := .Ancestors.Reverse -}}
+        <a href="{{ .RelPermalink }}">
+            {{- if (and (eq $i 0) (ne $breadcrumbs.home "")) -}}
+                {{- $breadcrumbs.home -}}
+            {{- else -}}
+                {{- .Title -}}
+            {{- end -}}
+        </a>
+        
+        {{- if (lt $i (sub $.Ancestors.Len 1)) -}}
+            <span class="breadcrumbs-separator">/</span>
+        {{- end -}}
+    {{- end -}}
+
+    {{- if $breadcrumbs.showCurrentPage -}}
+        <span class="breadcrumbs-separator">/</span>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- end -}}
 </div>
-{{ end }}
+{{- end -}}

@@ -524,14 +524,12 @@ figcaption {
 /* breadcrumbs */
 
 .breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
   font-size: small;
   margin-bottom: calc(-0.5 * var(--h1-margin-top));
   font-family: var(--font-mono);
-}
-
-.breadcrumbs span {
-  margin-right: -5px;
-  margin-left: -5px;
 }
 
 /* Comments */
