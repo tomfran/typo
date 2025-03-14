@@ -65,7 +65,7 @@ You can choose to hide the header on every page apart from the homepage with thi
 hideHeader = true
 ```
 
-I strongly recommend enabling [breadcrumbs](#72-breadcrumbs) if you do so.
+I strongly recommend enabling breadcrumbs if you do so.
 
 ## Note on Syntax Highlighting
 

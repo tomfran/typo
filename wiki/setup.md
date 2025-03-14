@@ -114,9 +114,11 @@ paginationSize = 100
 listSummaries = true
 listDateFormat = '2 Jan 2006'
 
-# Breadcrumbs (Uncomment to disable)
-# [params.breadcrumbs]
-# enabled = false
+# Breadcrumbs
+[params.breadcrumbs]
+enabled = true
+showCurrentPage = true
+home = "Home"
 
 # Social icons
 [[params.social]]
