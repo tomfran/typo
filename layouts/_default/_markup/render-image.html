@@ -47,7 +47,7 @@ and build the img class string as "img-tag1 img-tag2 ..."
 <figure class="{{ $classes }}">
 
     <div>
-        <img loading="lazy" alt="{{ .Text }}" src="{{ $url }}" {{ with $imgResource }}width="{{ .Width }}px" height="{{ .Height }}px"{{ end }}>
+        <img loading="lazy" alt="{{ .Text }}" src="{{ $url }}" {{ with $imgResource }}width="{{ .Width }}" height="{{ .Height }}"{{ end }}>
     </div>
 
     {{ with .Title }}
