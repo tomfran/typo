@@ -8,3 +8,4 @@
 - https://aadityathapa.github.io/, **Aaditya Thapa**, Data Analyst
 - https://automagic.blog, **Sangeeth Sudheer**, UX Engineer
 - https://kmiziz.xyz, **Vasily Negrebetskiy**, Software Engineer
+- https://rahulpat1l.github.io/, **Rahul Patil**, Student
