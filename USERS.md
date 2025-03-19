@@ -9,3 +9,4 @@
 - https://automagic.blog, **Sangeeth Sudheer**, UX Engineer
 - https://kmiziz.xyz, **Vasily Negrebetskiy**, Software Engineer
 - https://nykenik24.github.io, **Nykenik24**, Hobby programmer
+- https://rahulpat1l.github.io/, **Rahul Patil**, Student
