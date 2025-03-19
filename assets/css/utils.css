@@ -3,6 +3,11 @@
     flex-wrap: wrap;
 }
 
+.flexnowrap {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
 .bold {
     font-weight: bold;
 }
