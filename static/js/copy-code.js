@@ -1,34 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const codeBlocks = document.querySelectorAll("pre");
+  const codeBlocks = document.querySelectorAll(".highlight")
 
   codeBlocks.forEach((codeBlock) => {
-    if (codeBlock.className == "mermaid") return;
-    const copyButton = document.createElement("button");
-    copyButton.className = "copy-code-button";
-    copyButton.textContent = "copy";
+    if (codeBlock.className == "mermaid") return
+    const copyButton = document.createElement("button")
+    copyButton.className = "copy-code-button"
+    copyButton.textContent = "copy"
+    const copyButtonContainer = document.createElement("div")
+    copyButtonContainer.className = "copy-code-container"
+    copyButtonContainer.appendChild(copyButton)
 
     // Insert the button inside the <pre> block
-    codeBlock.appendChild(copyButton);
+    codeBlock.appendChild(copyButton)
 
     copyButton.addEventListener("click", function () {
-      const code = codeBlock.querySelector("code");
+      const code = codeBlock.querySelector("code")
       // Get the code content
-      const textToCopy = code.textContent || code.innerText;
+      const textToCopy = code.textContent || code.innerText
 
       // Use the Clipboard API to copy the text
       navigator.clipboard
         .writeText(textToCopy)
         .then(() => {
           // Change button text to "Copied"
-          copyButton.textContent = "copied";
+          copyButton.textContent = "copied"
 
           setTimeout(() => {
-            copyButton.textContent = "copy";
-          }, 2000); // Reset the button text after 2 seconds
+            copyButton.textContent = "copy"
+          }, 2000) // Reset the button text after 2 seconds
         })
         .catch((err) => {
-          console.error("Unable to copy text:", err);
-        });
-    });
-  });
-});
+          console.error("Unable to copy text:", err)
+        })
+    })
+  })
+})
