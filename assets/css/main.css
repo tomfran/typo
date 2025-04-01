@@ -66,7 +66,7 @@ li {
     list-style-type: none;
   }
 
-  &>input[type="checkbox"] {
+  & > input[type="checkbox"] {
     width: var(--li-checkbox-size);
     height: var(--li-checkbox-size);
     margin: 0 0.2em 0.15em -1.25em;
@@ -86,24 +86,17 @@ input {
 
 /* Code blocks */
 
-.highlight {
-  position: relative;
-}
-
-
-.copy-code-container {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 10;
-}
-
 .copy-code-button {
   background-color: var(--background);
   font-family: var(--font-mono);
   padding: 3px 6px;
-  font-size: .8em;
+  font-size: 0.8em;
   border-radius: var(--copy-code-button-border-radius);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  display: none;
   border: 1px solid var(--code-border);
 }
 
