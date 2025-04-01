@@ -32,6 +32,8 @@
   {{ partialCached "math.html" . }}
   {{ end }}
 
+  {{/* Body end hook */}}
+  {{ partial "functions/get_hook.html" (dict "hook" "body_end" "context" .) }}
 </body>
 
 <script src="{{ "js/theme-switch.js" | relURL }}"></script>
