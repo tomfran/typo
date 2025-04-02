@@ -24,6 +24,9 @@
     </main>
   </div>
 
+  {{/* Body end hook */}}
+  {{ partial "functions/get_hook.html" (dict "hook" "body_end" "context" .) }}
+
   <footer>
     {{ partial "footer.html" . }}
   </footer>
@@ -31,7 +34,6 @@
   {{ if .Param "math" }}
   {{ partialCached "math.html" . }}
   {{ end }}
-
 </body>
 
 <script src="{{ "js/theme-switch.js" | relURL }}"></script>

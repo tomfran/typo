@@ -1,0 +1,19 @@
+{{/* 
+    Customize layouts without overwriting files.
+    Hooks should be defined in the layouts/partials/hooks directory.
+    
+    Parameters:
+    - hook: The name of the hook to be used.
+    - context: The context to be passed to the partial.
+*/}}
+
+{{ $hook := .hook }}
+{{ $context := .context }}
+
+{{ if not (hasSuffix $hook ".html") }}
+    {{ $hook = printf "%s.html" $hook }}
+{{ end }}
+
+{{ if fileExists (path.Join "layouts/partials/hooks" $hook) }}   
+    {{ partial (path.Join "hooks" $hook) $context }}
+{{ end }}

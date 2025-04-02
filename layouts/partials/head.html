@@ -1,6 +1,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
+{{/* Head start hook */}}
+{{ partial "functions/get_hook.html" (dict "hook" "head_start" "context" .) }}
+
 {{ $faviconPath := (.Site.Params.faviconPath | default "" | absURL) }}
 
 <link rel="icon" type="image/ico" href="{{ $faviconPath }}/favicon.ico">
@@ -46,3 +49,5 @@
 {{ end }}
 {{ end }}
 
+{{/* Head end hook */}}
+{{ partial "functions/get_hook.html" (dict "hook" "head_end" "context" .) }}
