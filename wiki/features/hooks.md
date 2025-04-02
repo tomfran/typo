@@ -1,6 +1,6 @@
 ---
 title: "Hooks"
-date: "2024-10-6"
+date: "2024-10-06"
 summary: "Layout hooks"
 description: "Layout hooks"
 toc: false
