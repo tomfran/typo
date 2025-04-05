@@ -95,3 +95,17 @@ You can decide the date format to apply to single posts by setting the following
 [params]
 singleDateFormat = '2 January 2006'
 ```
+
+## Hide Date
+
+You can hide the date for a collection by setting the following param in the collection's list page front matter:
+
+```md
+showListDate: false
+```
+
+To hide the date for a single post, you can set the following param in the post's front matter:
+
+```md
+showDate: false
+```

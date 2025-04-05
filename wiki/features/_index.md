@@ -1,0 +1,3 @@
+---
+showListDate: false
+---
