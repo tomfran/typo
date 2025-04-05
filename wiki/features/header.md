@@ -1,6 +1,6 @@
 ---
 title: "Header"
-date: "2024-10-13"
+weight: 2
 summary: "Header parameters"
 description: "Header parameters"
 toc: false

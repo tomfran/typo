@@ -1,6 +1,6 @@
 ---
 title: "Single Page Parameters"
-date: "2024-10-09"
+weight: 6
 summary: "Single Page Parameters parameters"
 description: "Single Page Parameters parameters"
 toc: false
@@ -97,12 +97,6 @@ singleDateFormat = '2 January 2006'
 ```
 
 ## Hide Date
-
-You can hide the date for a collection by setting the following param in the collection's list page front matter:
-
-```md
-showListDate: false
-```
 
 To hide the date for a single post, you can set the following param in the post's front matter:
 
