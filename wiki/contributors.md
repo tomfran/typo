@@ -12,11 +12,10 @@ hidePagination: true
 hideBackToTop: false
 ---
 
-<div id="loading-message">Fetching GitHub data, hang tight!</div>
+<div id="loading-message">fetching GitHub data, hang tight!</div>
 
 <div id="content" style="display: none;">
-  The theme has accumulated <span id="star-count">over 300</span> stars on Github, and 
-  currently counts <span id="contributors-count">over 20</span> contributors:
+  Typo is currently on release <a href="https://github.com/tomfran/typo/releases/latest"><span id="release-number">...</span></a>, with <span id="star-count">over 300</span> stars on Github, and <span id="contributors-count">over 20</span> contributors:
 
   <ul id="contributors-list" style="list-style-type: none; padding: 0; margin-top: 2rem"></ul>
 </div>
@@ -27,44 +26,51 @@ hideBackToTop: false
     const cacheExpiryKey = "githubDataExpiry";
     const cacheExpiryTime = 3600 * 1000; // 1 hour in milliseconds
 
-    // Check if cached data exists and is still valid
     const cachedData = localStorage.getItem(cacheKey);
     const cachedExpiry = localStorage.getItem(cacheExpiryKey);
     const now = new Date().getTime();
 
     if (cachedData && cachedExpiry && now < cachedExpiry) {
-      const { starCount, contributors } = JSON.parse(cachedData);
-      updateUI(starCount, contributors);
+      const { starCount, contributors, latestRelease } = JSON.parse(cachedData);
+      updateUI(starCount, contributors, latestRelease);
       return;
     }
 
     try {
-      // Fetch star count
-      const repoResponse = await fetch("https://api.github.com/repos/tomfran/typo");
-      const repoData = await repoResponse.json();
+      const [repoRes, releaseRes, contributorsRes] = await Promise.all([
+        fetch("https://api.github.com/repos/tomfran/typo"),
+        fetch("https://api.github.com/repos/tomfran/typo/releases/latest"),
+        fetch("https://api.github.com/repos/tomfran/typo/contributors")
+      ]);
+
+      const [repoData, releaseData, contributors] = await Promise.all([
+        repoRes.json(),
+        releaseRes.json(),
+        contributorsRes.json()
+      ]);
+
       const starCount = repoData.stargazers_count;
+      const latestRelease = releaseData.name;
 
-      // Fetch contributors
-      const contributorsResponse = await fetch("https://api.github.com/repos/tomfran/typo/contributors");
-      const contributors = await contributorsResponse.json();
-
-      // Cache data
-      localStorage.setItem(cacheKey, JSON.stringify({ starCount, contributors }));
+      localStorage.setItem(cacheKey, JSON.stringify({ starCount, contributors, latestRelease }));
       localStorage.setItem(cacheExpiryKey, now + cacheExpiryTime);
 
-      updateUI(starCount, contributors);
+      console.log(releaseData)
 
+      updateUI(starCount, contributors, latestRelease);
     } catch (error) {
       console.error("Error fetching GitHub data:", error);
       document.getElementById("star-count").textContent = "Failed to fetch star count.";
-      document.getElementById("contributors-count").textContent = "Failed to fetch contributors count.";
+      document.getElementById("contributors-count").textContent = "Failed to fetch contributors.";
+      document.getElementById("release-number").textContent = "Failed to fetch release.";
     }
   }
 
-  function updateUI(starCount, contributors) {
+  function updateUI(starCount, contributors, latestRelease) {
     document.getElementById("loading-message").style.display = "none";
     document.getElementById("content").style.display = "block";
-    
+
+    document.getElementById("release-number").innerHTML = `${latestRelease}`;
     document.getElementById("star-count").textContent = `${starCount}`;
     document.getElementById("contributors-count").textContent = `${contributors.length}`;
 
