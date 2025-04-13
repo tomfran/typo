@@ -137,7 +137,6 @@ code {
   font-variant-ligatures: contextual;
   font-family: var(--font-mono);
   font-size: .9em;
-  line-height: 0;
 }
 
 
