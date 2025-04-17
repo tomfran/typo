@@ -566,18 +566,26 @@ table {
   font-size: var(--p-font-size);
   line-height: var(--p-line-height);
   color: var(--content-primary);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--code-border);
+  border-radius: var(--code-border-radius);
 }
 
 th,
 td {
   padding: var(--table-cell-padding);
-  border: 1px solid var(--code-border);
   text-align: left;
 }
 
 th {
   background-color: var(--code-background);
   font-weight: bold;
+}
+
+tbody tr {
+  border-top: 1px solid var(--code-border);
 }
 
 /* Quotes */
