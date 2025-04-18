@@ -39,8 +39,7 @@
     <h1> {{ . }} </h1>
     {{ end }}
 
-    {{ $pages := where .Site.RegularPages "Section" .Site.Params.homeCollection
-    }}
+    {{ $pages := where .Site.RegularPages "Section" "in" .Site.Params.homeCollection }}
 
     {{ $paginationSize := 1}}
     {{ if (gt .Site.Params.paginationSize 0) }}

@@ -50,7 +50,7 @@ You can decide to include a collection in your homepage:
 ```toml
 [params]
 homeCollectionTitle = 'Posts'
-homeCollection = 'posts'
+homeCollection = ["posts"]
 ```
 
-The above example includes the `/posts` collection. Note that you can omit the title if you prefer.
+The above example includes the `/posts` collection. You can also add other collections to the array. Note that you can omit the title if you prefer.
