@@ -559,6 +559,11 @@ figcaption {
 
 /* Tables */
 
+.table-outer {
+  width: 100%;
+  overflow-x: auto;
+}
+
 table {
   border-collapse: collapse;
   margin-top: var(--table-margin-top);
