@@ -1,6 +1,6 @@
 ---
 title: "Collections"
-date: "2024-10-10"
+weight: 5
 summary: "Collections parameters"
 description: "Collections parameters"
 toc: false
@@ -28,6 +28,15 @@ The date format can be tweaked with a format string.
 ```toml
 [params]
 listDateFormat = '2 Jan 2006'
+```
+
+## Hide Date
+
+Hide the date on the list page.
+
+```toml
+[params]
+showListDate = false
 ```
 
 ## Summary Toggle
