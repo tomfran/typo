@@ -107,7 +107,7 @@ I am interested in a range of topics, including algorithms, distributed systems,
 
 # Collection to display on home
 homeCollectionTitle = 'Posts'
-homeCollection = 'posts'
+homeCollection = ["posts"]
 
 # Lists parameters
 paginationSize = 100
