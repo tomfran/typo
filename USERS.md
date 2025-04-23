@@ -12,3 +12,4 @@
 - https://rahulpat1l.github.io/, **Rahul Patil**, Student
 - https://blog.borber.top, **Borber**, Software Engineer
 - https://evenlangas.no, **Even Falkenberg Langås**, Mechatronics Software Engineer
+- https://linh.nguyen.be, **Linh Nguyen**, Software Engineer
