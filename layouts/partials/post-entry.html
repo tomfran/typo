@@ -1,11 +1,10 @@
 <div class="post-line">
 
-    {{ $dateFormat := "2 Jan 2006"}}
-    {{ with .Site.Params.listDateFormat }}
-    {{ $dateFormat = .}}
-    {{ end }}
+    {{ $dateFormat := .Site.Params.listDateFormat | default "2 Jan 2006" }}
 
-    <p class="line-date">{{ .Date | time.Format $dateFormat }} </p>
+    {{ if .Parent.Param "showListDate" }}
+        <p class="line-date">{{ .Date | time.Format $dateFormat }} </p>
+    {{ end }}
 
     <div>
         <p class="line-title">
