@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Literata';
-    src: url('/fonts/Literata/Literata-Light.woff2') format('woff2');
+    src: url('/theme-fonts/Literata/Literata-Light.woff2') format('woff2');
     font-weight: light;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Literata';
-    src: url('/fonts/Literata/Literata-LightItalic.woff2') format('woff2');
+    src: url('/theme-fonts/Literata/Literata-LightItalic.woff2') format('woff2');
     font-weight: light;
     font-style: italic;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'Literata';
-    src: url('/fonts/Literata/Literata-SemiBold.woff2') format('woff2');
+    src: url('/theme-fonts/Literata/Literata-SemiBold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'Literata';
-    src: url('/fonts/Literata/Literata-SemiBoldItalic.woff2') format('woff2');
+    src: url('/theme-fonts/Literata/Literata-SemiBoldItalic.woff2') format('woff2');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: 'Monaspace';
-    src: url('/fonts/Monaspace/MonaspaceArgon-Regular.woff') format('woff');
+    src: url('/theme-fonts/Monaspace/MonaspaceArgon-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
     font-family: 'Monaspace';
-    src: url('/fonts/Monaspace/MonaspaceArgon-SemiBold.woff') format('woff');
+    src: url('/theme-fonts/Monaspace/MonaspaceArgon-SemiBold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;

@@ -21,6 +21,39 @@ By default the mode in use is auto, if you want, you can hard-code a color schem
 theme = 'auto | light | dark'
 ```
 
+## Custom Fonts
+
+Typo ships with a preset selection of Fonts by default which is used across the theme. You are free to bring your own fonts or load from Google Fonts. To make sure Typo can load them optimally, follow the instructions below.
+
+### Configure font names
+
+Create the file `assets/custom.css` if not already created in your Hugo site project and add the following:
+
+```css
+:root {
+    --font-body: 'body-font';
+    --font-mono: 'mono-font';
+}
+```
+
+Replace `body-font` and `mono-font` above with the correct name of your fonts.
+
+### Loading local fonts (skip this if using Google Fonts)
+
+Typo can preload your local font files if you configure them appropriately.
+
+1. Create `assets/themes/fonts` directory within your Hugo site project and copy over your custom fonts into this directory.
+2. Create `assets/css/fonts.css` file and define [`@font-face` rules](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) for your custom fonts. You can refer to font paths like `/fonts/some-font-file-name.extension`.
+3. Run/build your project.
+
+You will see that the built site has `<link rel="preload">` tags added for your font files and the contents of your `assets/css/fonts.css` would have been injected inside a `<style>` tag placed inside the `<head>`.
+
+### Loading Google Fonts / 3rd Party Fonts
+
+We recommend copying the `<link>` embed code from Google Fonts or similar third-party font hosting services for your chosen fonts and placing them inside `layouts/partials/hooks/head_start.html` within your Hugo site project. These typically included relevant optimizations and CSS `@font-face` definitions.
+
+Additionally, **you must** also create an empty `assets/themes/fonts.css` file so that the default theme fonts are not preloaded and loaded.
+
 ## Choosing a Color Palette
 
 Typo has the possibility to specify the color palette to use in the theme. The default one is black and white, 
@@ -47,7 +80,7 @@ This is the complete list of palettes available:
 - base16-mocha;
 - base16-cupcake.
 
-More are to come. 
+More are to come.
 
 ## Adding a Custom Color Palette
 

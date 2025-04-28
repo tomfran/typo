@@ -3,7 +3,6 @@ $CSS := slice
 (resources.Get "css/reset.css")
 (resources.Get "css/vars.css")
 (resources.Get "css/utils.css")
-(resources.Get "css/fonts.css")
 (resources.Get "css/main.css")
 (resources.Get "css/custom.css")
 (resources.Get "css/colors/default.css")
@@ -23,4 +22,10 @@ $combined := $CSS
 | fingerprint
 }}
 
+<style>
+{{- $fontsCss := resources.Get "css/fonts.css"
+        | resources.ExecuteAsTemplate "css/fonts.css" $
+}}
+{{- $fontsCss.Content | safeCSS }}
+</style>
 <link rel="stylesheet" href="{{ $combined.RelPermalink }}" media="all">
