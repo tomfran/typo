@@ -186,13 +186,14 @@ hr {
   font-size: small;
   font-family: var(--font-mono);
   margin-top: var(--header-menu-top-gap);
+  margin-bottom: var(--header-menu-bottom-gap);
   margin-right: var(--header-menu-side-gap);
 }
 
 .header-title {
   font-size: 2.6em;
   font-weight: bold;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   margin-top: 0;
 }
 

@@ -1,11 +1,7 @@
 .flex {
     display: flex;
     flex-wrap: wrap;
-}
-
-.flexnowrap {
-    display: flex;
-    flex-wrap: nowrap;
+    gap: 0rem 0rem;
 }
 
 .bold {

@@ -7,9 +7,10 @@
 
     /* header settings */
     --header-top-gap: 2rem;
-    --header-bottom-gap: 2rem;
-    --header-menu-side-gap: .5rem;
-    --header-menu-top-gap: 1rem;
+    --header-bottom-gap: 0.5rem;
+    --header-menu-side-gap: 0.5rem;
+    --header-menu-top-gap: 0.1rem;
+    --header-menu-bottom-gap: 0.4rem;
 
     /* Typography */
     --font-body: 'Literata', Georgia, Cambria, 'Noto Serif', 'Droif Serif', ui-serif, serif;
