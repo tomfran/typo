@@ -185,8 +185,14 @@ hr {
 .header p {
   font-size: small;
   font-family: var(--font-mono);
-  margin-top: var(--header-menu-top-gap);
+  margin-top: 0;
   margin-right: var(--header-menu-side-gap);
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: var(--header-menu-top-gap);
 }
 
 .header-title {
