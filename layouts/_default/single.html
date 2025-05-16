@@ -15,21 +15,31 @@
         {{- with .Param "summary" }}
         <p class="single-summary">{{ . | markdownify }}</p>
         {{- end }}
-    
-        {{- /* Reading Time */}}
-    
-        <p class="single-readtime">
-        {{- with .Date }}
-          {{- $dateMachine := . | time.Format "2006-01-02T15:04:05-07:00" }}
-          {{- $dateHuman := . | time.Format (default ":date_long" $.Site.Params.singleDateFormat) }}
-          <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-        {{- end }}
-    
-        {{- if .Param "readTime" }}
-          &nbsp; · &nbsp;
-          {{- .ReadingTime }} min read
-        {{- end }}
-        </p>
+   
+        {{- /* Date, Reading Time and Author */}}
+        <div class="single-subsummary">
+          {{ with $.Param "authorAvatarPath" }}
+            <img src="{{ . }}" alt="Author Avatar" />
+          {{ end }}
+          <div>
+            {{ with .Param "author" }}
+            <p class="author"> {{- .}} </p>
+            {{ end }}
+            <p class="single-date">
+            {{- with .Date }}
+              {{- $dateMachine := . | time.Format "2006-01-02T15:04:05-07:00" }}
+              {{- $dateHuman := . | time.Format (default ":date_long" $.Site.Params.singleDateFormat) }}
+              <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+            {{- end }}
+        
+            {{- if .Param "readTime" }}
+              &nbsp; · &nbsp;
+              {{- .ReadingTime }} min read
+            {{- end }}
+            </p>
+          </div>
+        </div>
+        
     </header>
     
     {{- if .Param "showTags" }}

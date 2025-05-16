@@ -12,6 +12,16 @@ showTags: false
 
 The following parameters apply to single pages, they are meant to be inserted in the `.md` files introductions, apart from the date format.
 
+## Author
+
+You can specify an author name to display and avatar path to use. Here is an example 
+using an image from /static: 
+
+```md
+author: "Francesco"
+authorAvatarPath: "/avatar.jpeg"
+```
+
 ## Table of Contents
 
 Show a table of contents at the beginning of the post.
