@@ -17,6 +17,7 @@
         {{- end }}
    
         {{- /* Date, Reading Time and Author */}}
+        {{ if or (or (.Param "author") (.Param "authorAvatarPath")) (or .Date (.Param "readTime")) }}
         <div class="single-subsummary">
           {{ with $.Param "authorAvatarPath" }}
             <img src="{{ . }}" alt="Author Avatar" />
@@ -39,6 +40,7 @@
             </p>
           </div>
         </div>
+        {{- end}}
         
     </header>
     
