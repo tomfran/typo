@@ -48,6 +48,19 @@ Enable math rendering.
 math: true
 ```
 
+You may encounter issues rendering complex equations.
+This is due to a [known issue](https://discourse.gohugo.io/t/one-of-several-latex-equations-is-not-rendered-by-katex/47790). 
+
+A possible workaround is to wrap your equation in `{{< rawhtml >}}` tags: 
+
+```
+{{< rawhtml >}}
+$$
+...
+$$
+{{< rawhtml >}}
+```
+
 ## Tags
 
 Create tags associated with the post and decide to show them.
