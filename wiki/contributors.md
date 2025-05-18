@@ -9,22 +9,24 @@ autonumber: false
 math: false
 showTags: false
 hidePagination: true
-hideBackToTop: false
+hideBackToTop: true
 ---
 
 <div id="loading-message">fetching GitHub data, hang tight!</div>
 
 <div id="content" style="display: none;">
-  Typo is currently on release <a href="https://github.com/tomfran/typo/releases/latest"><span id="release-number">...</span></a>, with <span id="star-count">over 300</span> stars on Github, and <span id="contributors-count">over 20</span> contributors:
+  Typo is currently on release <a href="https://github.com/tomfran/typo/releases/latest"><span id="release-number">...</span></a>, 
+  with <span id="star-count">over 300</span> stars, and 
+  <span id="contributors-count">over 20</span> contributors:
 
-  <ul id="contributors-list" style="list-style-type: none; padding: 0; margin-top: 2rem"></ul>
+  <div id="contributors-list" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 1.5rem;"></div>
 </div>
 
 <script>
   async function fetchGitHubData() {
     const cacheKey = "githubData";
     const cacheExpiryKey = "githubDataExpiry";
-    const cacheExpiryTime = 3600 * 1000; // 1 hour in milliseconds
+    const cacheExpiryTime = 3600 * 1000;
 
     const cachedData = localStorage.getItem(cacheKey);
     const cachedExpiry = localStorage.getItem(cacheExpiryKey);
@@ -55,8 +57,6 @@ hideBackToTop: false
       localStorage.setItem(cacheKey, JSON.stringify({ starCount, contributors, latestRelease }));
       localStorage.setItem(cacheExpiryKey, now + cacheExpiryTime);
 
-      console.log(releaseData)
-
       updateUI(starCount, contributors, latestRelease);
     } catch (error) {
       console.error("Error fetching GitHub data:", error);
@@ -70,7 +70,7 @@ hideBackToTop: false
     document.getElementById("loading-message").style.display = "none";
     document.getElementById("content").style.display = "block";
 
-    document.getElementById("release-number").innerHTML = `${latestRelease}`;
+    document.getElementById("release-number").textContent = latestRelease;
     document.getElementById("star-count").textContent = `${starCount}`;
     document.getElementById("contributors-count").textContent = `${contributors.length}`;
 
@@ -78,15 +78,16 @@ hideBackToTop: false
     contributorsList.innerHTML = "";
 
     contributors.forEach(contributor => {
-      const listItem = document.createElement("li");
-      listItem.style.marginBottom = ".5rem";
-      listItem.innerHTML = `
-        <span style="display: flex; align-items: bottom;">
-          <img src="${contributor.avatar_url}" alt="${contributor.login}" width="30" height="30" style="margin-right: 10px; border-radius: 50%;">
-          <a href="${contributor.html_url}">${contributor.login}</a>&nbsp;- ${contributor.contributions}
-        </span>
+      const contributorItem = document.createElement("a");
+      contributorItem.href = contributor.html_url;
+      contributorItem.title = contributor.login;
+      contributorItem.style.display = "inline-block";
+
+      contributorItem.innerHTML = `
+        <img src="${contributor.avatar_url}" alt="${contributor.login}" width="45" height="45" style="border-radius: 50%;">
       `;
-      contributorsList.appendChild(listItem);
+
+      contributorsList.appendChild(contributorItem);
     });
   }
 
