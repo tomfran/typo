@@ -51,15 +51,17 @@ math: true
 You may encounter issues rendering complex equations.
 This is due to a [known issue](https://discourse.gohugo.io/t/one-of-several-latex-equations-is-not-rendered-by-katex/47790). 
 
-A possible workaround is to wrap your equation in `{{< rawhtml >}}` tags: 
+A possible workaround is to wrap your equation in `rawhtml` tags: 
 
 ```
-{{< rawhtml >}}
+<rawhtml>
 $$
 ...
 $$
-{{< rawhtml >}}
+</rawhtml>
 ```
+
+> You must wrap the rawhtml tag in {{ ... }}, omitted due to rendering constraints.
 
 ## Tags
 
