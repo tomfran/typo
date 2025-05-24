@@ -7,70 +7,81 @@
 {{ end }}
 
 <div {{ if .Param "autonumber" }} class="autonumber" {{ end }}>
+  <article>
+    <header class="single-intro-container">
+        {{- /* Title and Summary */}}
+        
+        <h1 class="single-title">{{ .Title }}</h1>
+        {{- with .Param "summary" }}
+        <p class="single-summary">{{ . | markdownify }}</p>
+        {{- end }}
+   
+        {{- /* Date, Reading Time and Author */}}
+        {{ if or (or (.Param "author") (.Param "authorAvatarPath")) (or .Date (.Param "readTime")) }}
+        <div class="single-subsummary">
+          {{ with $.Param "authorAvatarPath" }}
+            <img src="{{ . }}" alt="Author Avatar" />
+          {{ end }}
+          <div>
+            {{ with .Param "author" }}
+            <p class="author"> {{- .}} </p>
+            {{ end }}
+            <p class="single-date">
+            {{- with .Date }}
+              {{- $dateMachine := . | time.Format "2006-01-02T15:04:05-07:00" }}
+              {{- $dateHuman := . | time.Format (default ":date_long" $.Site.Params.singleDateFormat) }}
+              <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+            {{- end }}
+        
+            {{- if .Param "readTime" }}
+              {{ if .Date }}&nbsp; · &nbsp;{{ end }}
+              {{- .ReadingTime }} min read
+            {{- end }}
+            </p>
+          </div>
+        </div>
+        {{- end}}
+        
+    </header>
+    
+    {{- if .Param "showTags" }}
+      {{- $taxonomy := "tags" }}
+      {{- with .Param $taxonomy }}    
+        <div class="single-tags">
+            {{- range $index, $tag := . }}
+            {{- with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+                <span>
+                  <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+                </span>
+            {{- end }}
+            {{- end }}
+        </div>
+      {{- end }}
+    {{- end }}
+    
+    {{- /* Table of Contents */}}
+    
+    {{- if .Param "toc" }}
+      <aside class="toc">
+        <p><strong>Table of contents</strong></p>
+        {{ .TableOfContents }}
+      </aside>
+    {{- end }}
+    
+    {{- /* Page content */}}
+    
+    <div class="single-content">
+      {{ .Content }}
+    </div>
+  </article>
+  
+  {{- /* Comments */}}
 
-  <div class="single-intro-container">
-
-    {{/* Title and Summary */}}
-
-    <h1 class="single-title">{{ .Title }}</h1>
-    {{ with .Param "summary" }}
-    <p class="single-summary">{{ . | markdownify }}</p>
-    {{ end }}
-
-    {{/* Reading Time */}}
-
-    <p class="single-readtime">
-      {{ with .Date }}
-      {{ $dateMachine := . | time.Format "2006-01-02T15:04:05-07:00" }}
-      {{ $dateHuman := . | time.Format (default ":date_long" $.Site.Params.singleDateFormat) }}
-      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-      {{end}}
-
-      {{ if .Param "readTime" }}
-      {{ if .Date }} &nbsp; · &nbsp; {{ end }}
-      {{ .ReadingTime }} min read
-      {{end }}
-    </p>
-
-  </div>
-
-  {{ if .Param "showTags" }}
-
-  {{ $taxonomy := "tags" }}
-  {{ with .Param $taxonomy }}
-
-  <div class="single-tags">
-    {{ range $index, $tag := . }}
-    {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-    <span>
-      <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
-    </span>
-    {{ end }}
-    {{ end }}
-  </div>
-
-  {{ end }}
-  {{ end }}
-
-  {{/* Table of Content */}}
-
-  {{ if .Param "toc" }}
-  <aside class="toc">
-    <p><strong>Table of contents</strong></p>
-    {{ .TableOfContents }}
-  </aside>
-  {{ end }}
-
-  {{/* Page content */}}
-
-  <div class="single-content">
-    {{ .Content }}
-    {{ if .Site.Params.giscus.enable }}
-    {{ if not .Params.disableComment }}
-    {{ partial "comments.html" . }}
-    {{ end }}
-    {{ end }}
-  </div>
+  {{- if and .Site.Params.giscus.enable (not .Params.disableComment) }}
+    <div class="single-comments">
+      {{ partial "comments.html" . }}
+    </div>
+  {{- end }}
 
   {{ if .Store.Get "hasMermaid" }}
   {{ $mermaidDarkTheme := default "dark" (or .Params.mermaidDarkTheme .Site.Params.mermaidDarkTheme) }}
