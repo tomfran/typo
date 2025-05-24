@@ -66,7 +66,7 @@ li {
     list-style-type: none;
   }
 
-  & > input[type="checkbox"] {
+  &>input[type="checkbox"] {
     width: var(--li-checkbox-size);
     height: var(--li-checkbox-size);
     margin: 0 0.2em 0.15em -1.25em;
@@ -137,9 +137,17 @@ code {
   font-variant-ligatures: contextual;
   font-family: var(--font-mono);
   font-size: .9em;
-  line-height: 0;
 }
 
+li code,
+table code,
+p code {
+  background-color: var(--code-background);
+  border-radius: 3px;
+  padding: 2px;
+}
+
+/* Latex */
 
 .katex-display {
   overflow-x: auto;
@@ -177,8 +185,14 @@ hr {
 .header p {
   font-size: small;
   font-family: var(--font-mono);
-  margin-top: var(--header-menu-top-gap);
+  margin-top: 0;
   margin-right: var(--header-menu-side-gap);
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: var(--header-menu-top-gap);
 }
 
 .header-title {
@@ -315,8 +329,28 @@ footer a {
   margin-bottom: .5rem;
 }
 
-.single-readtime {
-  margin-top: .5rem;
+.single-subsummary {
+  margin-top: calc(.8 * var(--p-margin-top));
+  margin-bottom: var(--p-margin-bottom);
+  display: flex;
+  align-items: center;
+}
+
+.single-subsummary img {
+  height: 45px;
+  width: 45px;
+  margin-right: .7rem;
+  border-radius: 50%;
+}
+
+.author {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.single-date {
+  margin-top: 0;
+  margin-bottom: 0;
   color: var(--content-secondary);
 }
 
@@ -336,6 +370,7 @@ footer a {
 .single-tags span {
   margin-right: .3rem;
 }
+
 
 /* Single pagination */
 
@@ -549,15 +584,12 @@ figcaption {
   /* margin-top: -3rem; */
 }
 
-/* Code in paragraphs */
-
-p code {
-  background-color: var(--code-background);
-  border-radius: 3px;
-  padding: 2px;
-}
-
 /* Tables */
+
+.table-outer {
+  width: 100%;
+  overflow-x: auto;
+}
 
 table {
   border-collapse: collapse;
@@ -566,12 +598,16 @@ table {
   font-size: var(--p-font-size);
   line-height: var(--p-line-height);
   color: var(--content-primary);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--code-border);
+  border-radius: var(--code-border-radius);
 }
 
 th,
 td {
   padding: var(--table-cell-padding);
-  border: 1px solid var(--code-border);
   text-align: left;
 }
 
@@ -580,10 +616,8 @@ th {
   font-weight: bold;
 }
 
-table code {
-  background-color: var(--code-background);
-  border-radius: 3px;
-  padding: 2px;
+tbody tr {
+  border-top: 1px solid var(--code-border);
 }
 
 /* Quotes */

@@ -1,0 +1,44 @@
+{{/*
+Default table rendered plus an outer div to align and overflow tables
+accordingly.
+Ref: https://gohugo.io/render-hooks/tables/
+*/}}
+<div class="table-outer">
+    <table
+        {{- range $k, $v :=.Attributes }}
+        {{- if $v }}
+        {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+        {{- end }}
+        {{- end }}>
+        <thead>
+            {{- range .THead }}
+            <tr>
+                {{- range . }}
+                <th
+                    {{- with .Alignment }}
+                    {{- printf " style=%q" (printf "text-align: %s" .) |
+                    safeHTMLAttr }}
+                    {{- end -}}>
+                    {{- .Text -}}
+                </th>
+                {{- end }}
+            </tr>
+            {{- end }}
+        </thead>
+        <tbody>
+            {{- range .TBody }}
+            <tr>
+                {{- range . }}
+                <td
+                    {{- with .Alignment }}
+                    {{- printf " style=%q" (printf "text-align: %s" .) |
+                    safeHTMLAttr }}
+                    {{- end -}}>
+                    {{- .Text -}}
+                </td>
+                {{- end }}
+            </tr>
+            {{- end }}
+        </tbody>
+    </table>
+</div>

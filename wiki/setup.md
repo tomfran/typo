@@ -169,6 +169,8 @@ Sample post config.
 ```markdown
 ---
 title: "Log-Structured Merge Tree"
+author: "Francesco"
+authorAvatarPath: "/avatar.jpeg"
 date: "2023-11-12"
 summary: "An LSM Tree overview and Java implementation."
 description: "An LSM Tree overview and Java implementation."

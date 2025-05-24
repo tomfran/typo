@@ -12,6 +12,16 @@ showTags: false
 
 The following parameters apply to single pages, they are meant to be inserted in the `.md` files introductions, apart from the date format.
 
+## Author
+
+You can specify an author name to display and avatar path to use. Here is an example 
+using an image from /static: 
+
+```md
+author: "Francesco"
+authorAvatarPath: "/avatar.jpeg"
+```
+
 ## Table of Contents
 
 Show a table of contents at the beginning of the post.
@@ -37,6 +47,21 @@ Enable math rendering.
 ```md
 math: true
 ```
+
+You may encounter issues rendering complex equations.
+This is due to a [known issue](https://discourse.gohugo.io/t/one-of-several-latex-equations-is-not-rendered-by-katex/47790). 
+
+A possible workaround is to wrap your equation in `rawhtml` tags: 
+
+```
+<rawhtml>
+$$
+...
+$$
+</rawhtml>
+```
+
+> You must wrap the rawhtml tag in {{ ... }}, omitted due to rendering constraints.
 
 ## Tags
 

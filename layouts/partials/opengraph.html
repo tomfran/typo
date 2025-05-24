@@ -44,7 +44,7 @@
   {{- range . | first 6 }}
     <meta property="og:image" content="{{ .Permalink }}">
   {{- end }}
-{{- else -}}
+{{- else }}
 
   {{- /*
     Source modified to load `assets/images/og-image.{webp,png,jpg}` files if any of them exists.
@@ -52,11 +52,11 @@
     as using an external service.
   */ -}}
 
-  {{- if (and (or .IsHome .IsPage) (templates.Exists "partials/head/og-image.html")) -}}
-    {{- $ogImage := partial "head/og-image.html" . -}}
-    {{- with $ogImage -}}
+  {{- if templates.Exists "partials/head/og-image.html" }}
+    {{- $ogImage := partial "head/og-image.html" . | strings.TrimSpace }}
+    {{- with $ogImage }}
       <meta property="og:image" content="{{ . }}">
-    {{- end -}}
+    {{- end }}
   {{- end }}
   
 {{- end }}

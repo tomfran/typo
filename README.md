@@ -1,13 +1,18 @@
-![banner](https://raw.githubusercontent.com/tomfran/typo/main/images/banner-light.webp)
+![banner](https://raw.githubusercontent.com/tomfran/typo/main/images/banner-light.webp#gh-light-mode-only)
+![banner](https://raw.githubusercontent.com/tomfran/typo/main/images/banner-dark.webp#gh-dark-mode-only)
+
+<div align="center">
+
+[![wiki](https://img.shields.io/badge/doc-wiki-red?style=for-the-badge)](https://tomfran.github.io/typo-wiki/)
+[![GitHub Release](https://img.shields.io/github/v/release/tomfran/typo?style=for-the-badge)](https://github.com/tomfran/typo/releases/latest)
+[![last-commit](https://img.shields.io/github/last-commit/tomfran/typo?style=for-the-badge)](https://github.com/tomfran/typo/commits/)
+![stars](https://img.shields.io/github/stars/tomfran/typo?style=for-the-badge&color=orange)
+
+</div>
 
 # Typo, a Hugo theme.
 
 Typo is a theme backed by simplicity, as you can see in the screenshots below. The goal was to have a website centered around content and nothing more.
-
-[![wiki](https://img.shields.io/badge/doc-wiki-orange)](https://tomfran.github.io/typo-wiki/)
-[![hugo-typo](https://img.shields.io/badge/hugo_themes-@typo-red)](https://themes.gohugo.io/themes/typo/)
-[![GitHub Release](https://img.shields.io/github/v/release/tomfran/typo)](https://github.com/tomfran/typo/releases/latest)
-[![last-commit](https://img.shields.io/github/last-commit/tomfran/typo)](https://github.com/tomfran/typo/commits/)
 
 **Homepage**
 

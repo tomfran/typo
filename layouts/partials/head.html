@@ -6,11 +6,11 @@
 
 {{ $faviconPath := (.Site.Params.faviconPath | default "" | absURL) }}
 
-<link rel="icon" type="image/ico" href="{{ $faviconPath }}/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ $faviconPath }}/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ $faviconPath }}/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="{{ $faviconPath }}/android-chrome-192x192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ $faviconPath }}/apple-touch-icon.png">
+<link rel="icon" type="image/ico" href="{{ urls.JoinPath $faviconPath "favicon.ico" }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ urls.JoinPath $faviconPath "favicon-16x16.png" }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ urls.JoinPath $faviconPath "favicon-32x32.png" }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ urls.JoinPath $faviconPath "android-chrome-192x192.png" }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ urls.JoinPath $faviconPath "apple-touch-icon.png" }}">
 
 {{ with .OutputFormats.Get "rss" -}}
 {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
@@ -36,7 +36,7 @@
 
 <link rel="canonical" href="{{ .Permalink }}"/>
 
-{{ template "_internal/opengraph.html" . }}
+{{ template "partials/opengraph.html" . }}
 
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
