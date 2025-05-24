@@ -2,7 +2,7 @@
 
     {{ $dateFormat := .Site.Params.listDateFormat | default "2 Jan 2006" }}
 
-    {{ if .Parent.Param "showListDate" }}
+    {{ if .Parent.Param "showListDate" | default true}}
         <p class="line-date">{{ .Date | time.Format $dateFormat }} </p>
     {{ end }}
 
