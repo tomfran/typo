@@ -1,6 +1,6 @@
 ---
 title: "Controlling Images"
-weight: 4
+date: "2024-10-11"
 summary: "Controlling Images parameters"
 description: "Controlling Images parameters"
 toc: false

@@ -1,6 +1,6 @@
 ---
 title: "Advanced Customization"
-weight: 8
+date: "2024-10-07"
 summary: "Advanced customization options"
 description: "Advanced customization options"
 toc: false

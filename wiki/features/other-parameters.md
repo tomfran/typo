@@ -1,6 +1,6 @@
 ---
 title: "Other Parameters"
-weight: 7
+date: "2024-10-08"
 summary: "Other Parameters parameters"
 description: "Other Parameters parameters"
 toc: false

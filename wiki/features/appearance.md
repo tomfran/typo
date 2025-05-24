@@ -1,6 +1,6 @@
 ---
 title: "Appearance"
-weight: 3
+date: "2024-10-12"
 summary: "Appearance parameters"
 description: "Appearance parameters"
 toc: false

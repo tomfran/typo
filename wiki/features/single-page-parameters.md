@@ -1,6 +1,6 @@
 ---
 title: "Single Page Parameters"
-weight: 6
+date: "2024-10-09"
 summary: "Single Page Parameters parameters"
 description: "Single Page Parameters parameters"
 toc: false
@@ -94,12 +94,4 @@ You can decide the date format to apply to single posts by setting the following
 ```toml
 [params]
 singleDateFormat = '2 January 2006'
-```
-
-## Hide Date
-
-To hide the date for a single post, you can set the following param in the post's front matter:
-
-```md
-showDate: false
 ```
