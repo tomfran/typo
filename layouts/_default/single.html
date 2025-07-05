@@ -34,7 +34,7 @@
             {{- end }}
         
             {{- if .Param "readTime" }}
-              &nbsp; · &nbsp;
+              {{ if .Date }}&nbsp; · &nbsp;{{ end }}
               {{- .ReadingTime }} min read
             {{- end }}
             </p>
