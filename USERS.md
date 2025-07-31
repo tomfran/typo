@@ -13,4 +13,5 @@
 - https://blog.borber.top, **Borber**, Software Engineer
 - https://evenlangas.no, **Even Falkenberg Langås**, Mechatronics Software Engineer
 - https://linh.nguyen.be, **Linh Nguyen**, Software Engineer
+- https://joywrites.dev, **Joydeep Bhattacharya**, Software Engineer
 - https://www.tradix.dev, **Tradix**, CS Student
