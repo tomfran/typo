@@ -15,4 +15,5 @@
 - [linh.nguyen.be](https://linh.nguyen.be), **Linh Nguyen**, Software Engineer
 - [joywrites.dev](https://joywrites.dev), **Joydeep Bhattacharya**, Software Engineer
 - [www.tradix.dev](https://www.tradix.dev), **Tradix**, CS Student
-- [edoofra.github.io/personal_portfolio](https://edoofra.github.io/personal_portfolio/) **edoofra**, Software Engineer
+- [edoofra.github.io/personal_portfolio](https://edoofra.github.io/personal_portfolio/), **edoofra**, Software Engineer
+- [junaid.foo](https://junaid.foo), **Junaid Rahim**, Software Engineer
