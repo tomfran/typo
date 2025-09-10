@@ -38,3 +38,12 @@ Summaries can be turned on and off with this setting.
 [params]
 listSummaries = true
 ```
+
+## Hide List Date
+
+To hide the dates on the list page, add the following to the frontmatter of the collection's `_index.md`:
+
+```toml
+[params]
+showListDate = false
+```

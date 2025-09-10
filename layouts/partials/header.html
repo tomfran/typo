@@ -8,14 +8,16 @@
         <a href="{{ site.BaseURL }}">{{ site.Title }}</a>
     </h1>
 
-    <div class="flex">
+    <div class="header-menu">
         {{ $currentPage := . }}
 
         {{ with site.Params.menu }}
         {{ range . }}
-      
-        <p class="small {{ if eq .name (lower $currentPage.Name) }} bold {{end}}">
-            <a href="{{ .url }}" {{ if and (isset . "newTab") .newTab }}target="_blank" rel="noopener noreferrer"{{ end }}>
+
+        <p
+            class="small {{ if eq .name (lower $currentPage.Name) }} bold {{end}}">
+            <a href="{{ .url }}" {{ if and (isset . "newTab") .newTab
+                }}target="_blank" rel="noopener noreferrer" {{ end }}>
                 /{{.name }}
             </a>
         </p>
