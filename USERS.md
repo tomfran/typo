@@ -17,3 +17,4 @@
 - [www.tradix.dev](https://www.tradix.dev), **Tradix**, CS Student
 - [edoofra.github.io/personal_portfolio](https://edoofra.github.io/personal_portfolio/), **edoofra**, Software Engineer
 - [junaid.foo](https://junaid.foo), **Junaid Rahim**, Software Engineer
+- [siyuan.io](https://siyuan.io), **Siyuan Qi**, Researcher
