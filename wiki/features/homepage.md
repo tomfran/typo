@@ -53,4 +53,4 @@ homeCollectionTitle = 'Posts'
 homeCollection = 'posts'
 ```
 
-The above example includes the `/posts` collection. Note that you can omit the title if you prefer.
+The above example includes the `/posts` collection. You can also create a list of required collections in the form of an array. Note that you can omit the title if you prefer.
