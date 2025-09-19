@@ -6,6 +6,7 @@
 
 {{ $faviconPath := (.Site.Params.faviconPath | default "" | absURL) }}
 
+{{- partialCached "head/preload.html" . }}
 <link rel="icon" type="image/ico" href="{{ urls.JoinPath $faviconPath "favicon.ico" }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ urls.JoinPath $faviconPath "favicon-16x16.png" }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ urls.JoinPath $faviconPath "favicon-32x32.png" }}">
