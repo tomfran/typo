@@ -18,3 +18,4 @@
 - [edoofra.github.io/personal_portfolio](https://edoofra.github.io/personal_portfolio/), **edoofra**, Software Engineer
 - [junaid.foo](https://junaid.foo), **Junaid Rahim**, Software Engineer
 - [siyuan.io](https://siyuan.io), **Siyuan Qi**, Researcher
+- [arnaudrenaud.com](https://www.arnaudrenaud.com/), **Arnaud Renaud**, Software Engineer
