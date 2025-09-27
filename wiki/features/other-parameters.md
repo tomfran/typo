@@ -134,6 +134,12 @@ Mermaid diagrams are supported, you can set light and dark themes in your config
 
 ```toml
 [params]
-mermaidTheme = "default"
+mermaidTheme = "neutral"
 mermaidDarkTheme = "dark"
+```
+
+```mermaid
+sequenceDiagram
+  Alice->>Bob: Hey what's that nice theme you're using? 
+  Bob->>Alice: It's Typo!
 ```
