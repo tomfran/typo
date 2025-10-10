@@ -1,0 +1,6 @@
+{{- /* Generate preload tags for all fonts within assets/fonts directory */}}
+
+{{- $fonts := or (resources.Match "fonts/**.{eot,ttf,otf,woff,woff2,svg}") (resources.Match "theme-fonts/**.{eot,ttf,otf,woff,woff2,svg}") }}
+{{- range $fonts }}
+  <link rel="preload" as="font" href="{{ .RelPermalink }}" type="{{ .MediaType.Type }}" crossorigin>
+{{- end }}
