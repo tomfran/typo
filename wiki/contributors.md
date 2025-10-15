@@ -42,7 +42,7 @@ hideBackToTop: true
       const [repoRes, releaseRes, contributorsRes] = await Promise.all([
         fetch("https://api.github.com/repos/tomfran/typo"),
         fetch("https://api.github.com/repos/tomfran/typo/releases/latest"),
-        fetch("https://api.github.com/repos/tomfran/typo/contributors")
+        fetch("https://api.github.com/repos/tomfran/typo/contributors?per_page=100")
       ]);
 
       const [repoData, releaseData, contributors] = await Promise.all([
