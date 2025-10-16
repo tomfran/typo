@@ -46,9 +46,18 @@ and build the img class string as "img-tag1 img-tag2 ..."
 {{/* Use the computed classes on the rendered figure */}}
 <figure class="{{ $classes }}">
 
-    <div class="img-container" {{ with $imgResource }}style="--w: {{ .Width }}; --h: {{ .Height }};"{{ end }}>
-        <img loading="lazy" alt="{{ .Text }}" src="{{ $url }}" {{ with $imgResource }}width="{{ .Width }}" height="{{ .Height }}"{{ end }}>
-    </div>
+    {{ $text := .Text }}
+    {{ with $imgResource }}
+      {{ if eq $imgResource.MediaType.SubType "svg" }}
+        <div class="img-container">
+            <img loading="lazy" alt="{{ $text }}" src="{{ $url }}">
+        </div>
+      {{ else }}
+        <div class="img-container" style="--w: {{ .Width }}; --h: {{ .Height }};">
+            <img loading="lazy" alt="{{ $text }}" src="{{ $url }}" width="{{ .Width }}" height="{{ .Height }}">
+        </div>
+      {{ end }}
+    {{ end }}
 
     {{ with .Title }}
     <div class="caption-container">
