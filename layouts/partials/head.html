@@ -38,6 +38,8 @@
 
 {{ template "partials/opengraph.html" . }}
 
+{{ partial "head/custom-head.html" . }}
+
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
 
