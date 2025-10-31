@@ -21,3 +21,4 @@
 - [arnaudrenaud.com](https://www.arnaudrenaud.com/), **Arnaud Renaud**, Software Engineer
 - [arav.ink](https://arav.ink), **Aravind S**, Founder and Engineer
 - [asimov.top](https://asimov.top), **Asimov Ai**, Software Engineer
+- [xinq.pages.dev](https://xinq.pages.dev), **Xin Qiao**, PhD student in astronomy
