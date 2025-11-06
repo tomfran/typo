@@ -53,9 +53,12 @@
   */ -}}
 
   {{- if templates.Exists "partials/head/og-image.html" }}
-    {{- $ogImage := partial "head/og-image.html" . | strings.TrimSpace }}
+    {{- $ogImage := partial "head/og-image.html" . }}
     {{- with $ogImage }}
-      <meta property="og:image" content="{{ . }}">
+      {{- $ogImageStr := printf "%s" . }}
+      {{- with $ogImageStr }}
+        <meta property="og:image" content="{{ . }}">
+      {{- end }}
     {{- end }}
   {{- end }}
   
