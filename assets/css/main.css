@@ -100,11 +100,11 @@ input {
   border: 1px solid var(--code-border);
 }
 
-div.highlight {
+div.code-block {
   position: relative;
 }
 
-div.highlight:hover .copy-code-button {
+div.code-block:hover .copy-code-button {
   display: block;
 }
 
