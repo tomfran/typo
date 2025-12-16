@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           setTimeout(() => {
             copyButton.textContent = "copy";
-          }, 2000); // Reset the button text after 2 seconds
+          }, 500); // Reset the button text after 2 seconds
         })
         .catch((err) => {
           console.error("Unable to copy text:", err);
