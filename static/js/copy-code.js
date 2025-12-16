@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const copyButtons = document.querySelectorAll(".copy-code-button");
 
   copyButtons.forEach((copyButton) => {
+    // Code block must be the element before the button
     const codeBlock = copyButton.previousElementSibling;
 
     copyButton.addEventListener("click", function () {
