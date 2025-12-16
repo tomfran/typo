@@ -1,15 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const codeBlocks = document.querySelectorAll("pre");
+  const copyButtons = document.querySelectorAll(".copy-code-button");
 
-  codeBlocks.forEach((codeBlock) => {
-    if (codeBlock.className == "mermaid") return;
-    const copyButton = document.createElement("button");
-    copyButton.className = "copy-code-button";
-    copyButton.textContent = "copy";
-
-    // Insert the button inside the <div> block
-    const codeDiv = codeBlock.parentElement;
-    codeDiv.appendChild(copyButton);
+  copyButtons.forEach((copyButton) => {
+    // Code block must be the element before the button
+    const codeBlock = copyButton.previousElementSibling;
 
     copyButton.addEventListener("click", function () {
       const code = codeBlock.querySelector("code");
@@ -25,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           setTimeout(() => {
             copyButton.textContent = "copy";
-          }, 2000); // Reset the button text after 2 seconds
+          }, 500); // Reset the button text after 2 seconds
         })
         .catch((err) => {
           console.error("Unable to copy text:", err);
