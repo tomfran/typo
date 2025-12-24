@@ -24,3 +24,4 @@
 - [xinq.pages.dev](https://xinq.pages.dev), **Xin Qiao**, PhD student in astronomy
 - [tawandamunongo.dev](https://tawandamunongo.dev), **Tawanda Munongo**, Software Engineer
 - [foliocassianico.com.br](https://www.foliocassianico.com.br/), **Cássio Gabriel**, Cloud Engineer
+- [amirhossein-z.github.io](https://amirhossein-z.github.io/), **Amirhossein Zareian**, Software Engineer
