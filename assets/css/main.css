@@ -1,3 +1,21 @@
+:root {
+  color-scheme: light dark;
+
+  --content-primary: light-dark(var(--content-primary-light), var(--content-primary-dark));
+  --content-secondary: light-dark(var(--content-secondary-light), var(--content-secondary-dark));
+  --background: light-dark(var(--background-light), var(--background-dark));
+  --code-background: light-dark(var(--code-background-light), var(--code-background-dark));
+  --code-border: light-dark(var(--code-border-light), var(--code-border-dark));
+}
+
+.light {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -76,12 +94,6 @@ li {
 
 a {
   text-decoration: underline;
-}
-
-input {
-  .dark & {
-    color-scheme: dark;
-  }
 }
 
 /* Code blocks */
@@ -493,12 +505,21 @@ figure {
   }
 }
 
-.dark .img-light {
+.dark .img-light,
+.light .img-dark {
   display: none !important;
 }
 
-.light .img-dark {
-  display: none !important;
+@media (prefers-color-scheme: dark) {
+  body:not(.light) .img-light {
+    display: none !important;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body:not(.dark) .img-dark {
+    display: none !important;
+  }
 }
 
 .img-small div {
