@@ -13,7 +13,7 @@ Any other reasonable changes are more than welcome. Keep in mind the guidelines:
 - keep the code as minimal as possible, and avoid comments in the code unless needed;
 - keep the parameters (e.g. in hugo.toml) as concise and clear as possible;
 - update the [wiki](https://github.com/tomfran/typo/tree/main/wiki) if needed, trying to maintain the current style of writing;
-- squash your change in a single commit.
+- run `make format` to format JS and CSS files before committing: you need to install node for this.
 
 **On Breaking Changes**
 
