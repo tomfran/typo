@@ -12,11 +12,13 @@ release-minor: ## Minor version release
 release-major: ## Major version release
 	@./scripts/release.sh major
 
-format: ## Format JS and CSS files
-	npx prettier --write "**/*.{js,css}"
+format: ## Format JS, CSS, and TOML files.
+	@npx --yes prettier --write "**/*.{js,css}"
+	@npx --yes @taplo/cli fmt
 
-format-check: ## Check if JS and CSS files are formatted
-	npx prettier --check "**/*.{js,css}"
+format-check: ## Check format on JS, CSS, and TOML files.
+	@npx --yes prettier --check "**/*.{js,css}"
+	@npx --yes @taplo/cli fmt --check
 
 help: ## Show available targets
 	@echo 'Available commands:'

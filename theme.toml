@@ -8,27 +8,27 @@ homepage = 'https://github.com/tomfran/typo'
 demosite = 'https://tomfran.github.io/typo-wiki/'
 
 tags = [
-    "responsive",
-    "simple",
-    "clean",
-    "light",
-    "dark",
-    "blog",
-    "minimal",
-    "personal",
-    "portfolio",
+  "responsive",
+  "simple",
+  "clean",
+  "light",
+  "dark",
+  "blog",
+  "minimal",
+  "personal",
+  "portfolio",
 ]
 
 features = [
-    "responsive",
-    "blog",
-    "table-of-contents",
-    "highlight.js",
-    "favicon",
-    "social-icons",
-    "minified-assets",
-    "dark-light-images",
-    "color-palettes",
+  "responsive",
+  "blog",
+  "table-of-contents",
+  "highlight.js",
+  "favicon",
+  "social-icons",
+  "minified-assets",
+  "dark-light-images",
+  "color-palettes",
 ]
 
 [author]
