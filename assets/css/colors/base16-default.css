@@ -1,15 +1,13 @@
 :root {
-    --content-primary: rgb(24, 24, 24); /*base07*/
-    --content-secondary: rgb(88, 88, 88); /*base04*/
-    --background: rgb(248, 248, 248); /*base00*/
-    --code-background: rgb(232, 232, 232); /*base01*/
-    --code-border: rgb(216, 216, 216); /*base02*/
-}
+    --content-primary-light: rgb(24, 24, 24); /*base07*/
+    --content-secondary-light: rgb(88, 88, 88); /*base04*/
+    --background-light: rgb(248, 248, 248); /*base00*/
+    --code-background-light: rgb(232, 232, 232); /*base01*/
+    --code-border-light: rgb(216, 216, 216); /*base02*/
 
-.dark {
-    --content-primary: rgb(248, 248, 248); /*base00*/
-    --content-secondary: rgb(184, 184, 184); /*base03*/
-    --background: rgb(24, 24, 24); /*base07*/
-    --code-background: rgb(40, 40, 40); /*base06*/
-    --code-border: rgb(56, 56, 56); /*base05*/
+    --content-primary-dark: rgb(248, 248, 248); /*base00*/
+    --content-secondary-dark: rgb(184, 184, 184); /*base03*/
+    --background-dark: rgb(24, 24, 24); /*base07*/
+    --code-background-dark: rgb(40, 40, 40); /*base06*/
+    --code-border-dark: rgb(56, 56, 56); /*base05*/
 }

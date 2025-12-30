@@ -1,15 +1,13 @@
 :root {
-    --content-primary: rgb(36, 36, 36);
-    --content-secondary: rgb(117, 117, 117);
-    --background: rgb(255, 255, 255);
-    --code-background: rgb(249, 249, 249);
-    --code-border: rgb(229, 229, 229);
-}
+    --content-primary-light: rgb(36, 36, 36);
+    --content-secondary-light: rgb(117, 117, 117);
+    --background-light: rgb(255, 255, 255);
+    --code-background-light: rgb(249, 249, 249);
+    --code-border-light: rgb(229, 229, 229);
 
-.dark {
-    --content-primary: rgb(218, 218, 218);
-    --content-secondary: rgb(140, 140, 140);
-    --background: rgb(20, 20, 20);
-    --code-background: rgb(30, 30, 30);
-    --code-border: rgb(50, 50, 50);
+    --content-primary-dark: rgb(218, 218, 218);
+    --content-secondary-dark: rgb(140, 140, 140);
+    --background-dark: rgb(20, 20, 20);
+    --code-background-dark: rgb(30, 30, 30);
+    --code-border-dark: rgb(50, 50, 50);
 }
