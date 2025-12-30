@@ -1,25 +1,25 @@
 .flex {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .flexnowrap {
-    display: flex;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 .small {
-    font-size: medium;
+  font-size: medium;
 }
 
 .monospace {
-    font-family: var(--font-mono);
+  font-family: var(--font-mono);
 }

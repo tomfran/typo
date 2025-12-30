@@ -1,13 +1,13 @@
 :root {
-    --content-primary-light: rgb(43, 48, 59); /*base00*/
-    --content-secondary-light: rgb(101, 115, 126); /*base03*/
-    --background-light: rgb(239, 241, 245); /*base07*/
-    --code-background-light: rgb(223, 225, 232); /*base06*/
-    --code-border-light: rgb(192, 197, 206); /*base05*/
+  --content-primary-light: rgb(43, 48, 59); /*base00*/
+  --content-secondary-light: rgb(101, 115, 126); /*base03*/
+  --background-light: rgb(239, 241, 245); /*base07*/
+  --code-background-light: rgb(223, 225, 232); /*base06*/
+  --code-border-light: rgb(192, 197, 206); /*base05*/
 
-    --content-primary-dark: rgb(239, 241, 245); /*base07*/
-    --content-secondary-dark: rgb(167, 173, 186); /*base04*/
-    --background-dark: rgb(43, 48, 59); /*base00*/
-    --code-background-dark: rgb(52, 61, 70); /*base01*/
-    --code-border-dark: rgb(79, 91, 102); /*base02*/
+  --content-primary-dark: rgb(239, 241, 245); /*base07*/
+  --content-secondary-dark: rgb(167, 173, 186); /*base04*/
+  --background-dark: rgb(43, 48, 59); /*base00*/
+  --code-background-dark: rgb(52, 61, 70); /*base01*/
+  --code-border-dark: rgb(79, 91, 102); /*base02*/
 }
