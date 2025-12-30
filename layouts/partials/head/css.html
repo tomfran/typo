@@ -6,10 +6,9 @@ $CSS := slice
 (resources.Get "css/fonts.css")
 (resources.Get "css/main.css")
 (resources.Get "css/custom.css")
-(resources.Get "css/colors/default.css")
 }}
 
-{{ with .Site.Params.colorPalette }}
+{{ with .Site.Params.colorPalette | default "default" }}
 
 {{ $path := printf "css/colors/%s.css" . }}
 {{ $CSS = $CSS | append (resources.Get $path)}}
