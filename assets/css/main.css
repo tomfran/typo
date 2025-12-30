@@ -96,12 +96,6 @@ a {
   text-decoration: underline;
 }
 
-input {
-  .dark & {
-    color-scheme: dark;
-  }
-}
-
 /* Code blocks */
 
 .copy-code-button {
@@ -511,12 +505,21 @@ figure {
   }
 }
 
-.dark .img-light {
+.dark .img-light,
+.light .img-dark {
   display: none !important;
 }
 
-.light .img-dark {
-  display: none !important;
+@media (prefers-color-scheme: dark) {
+  body:not(.light) .img-light {
+    display: none !important;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body:not(.dark) .img-dark {
+    display: none !important;
+  }
 }
 
 .img-small div {
