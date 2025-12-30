@@ -6,13 +6,9 @@
   {{ partial "head.html" . }}
 </head>
 
-{{ $theme := "auto"}}
+{{ $theme := .Param "theme" | default "auto" }}
 
-{{ with .Param "theme" }}
-{{ $theme = .}}
-{{ end }}
-
-<body class="{{ $theme }}">
+<body {{ if not (eq (.Param "theme") "auto") }}class="{{ $theme }}"{{ end }}>
 
   <div class="content">
     <header>
