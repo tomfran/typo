@@ -13,3 +13,7 @@ min = "0.116.0"
 enabled = true
 showCurrentPage = true
 home = "Home"
+
+[markup]
+[markup.highlight]
+noClasses = false
