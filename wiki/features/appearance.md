@@ -69,19 +69,23 @@ I strongly recommend enabling breadcrumbs if you do so.
 
 ## Note on Syntax Highlighting
 
-The theme supports syntax highlighting, and you can specify the theme as follows: 
+The theme supports syntax highlighting.
+By default, it uses a slightly modified version of the `algol` theme, defined in `assets/css/syntax-highlighting.css`.
+To use a custom color scheme, you can overwrite this file.
+Stylesheets for other color schemes, e.g. Monokai, can be generated with this command:
+
+```shell
+hugo gen chromastyles --style monokai > assets/css/syntax-highlighting.css    
+```
+
+Alternatively, you can use a predefined color scheme with [inline styles]: 
 
 ```toml
 [markup]
 [markup.highlight]
-style = 'algol'
+noClasses = true
+style = 'monokai'
 ```
-
-`algol` is the recommended theme, and for it to work, the background-color of the code 
-elements is enforced.
-This has the side effect of breaking other color schemes, e.g. Monokai. 
-
-You can make them work by removing `!important` from the background color of the code pre elements.
 
 I suggest trying [color schemes](https://xyproto.github.io/splash/docs/all.html) and see what can work for you.
 
@@ -95,3 +99,5 @@ Note that if you don't include the following parameters (or leave footerContent 
 showFooter = true
 footerContent = "Your **custom** md `footer`"
 ```
+
+[inline styles]: https://neohugo.github.io/content-management/syntax-highlighting/#noclasses
