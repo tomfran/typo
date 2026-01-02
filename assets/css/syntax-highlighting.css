@@ -1,4 +1,4 @@
-/* Generated using: hugo gen chromastyles --style bw */
+/* Generated using: hugo gen chromastyles --style bw and manually tweaked */
 
 /* Background */
 .bg {
@@ -35,7 +35,7 @@
 
 /* LineHighlight */
 .chroma .hl {
-  background-color: #e5e5e5;
+  background-color: var(--code-border);
 }
 
 /* LineNumbersTable */
@@ -45,7 +45,7 @@
   user-select: none;
   margin-right: 0.4em;
   padding: 0 0.4em 0 0.4em;
-  color: #7f7f7f;
+  color: var(--content-secondary);
 }
 
 /* LineNumbers */
@@ -55,7 +55,7 @@
   user-select: none;
   margin-right: 0.4em;
   padding: 0 0.4em 0 0.4em;
-  color: #7f7f7f;
+  color: var(--content-secondary);
 }
 
 /* Line */
@@ -113,9 +113,14 @@
   font-weight: bold;
 }
 
+/* Function Names */
+.chroma .nf {
+  font-weight: bold;
+}
+
 /* LiteralString */
 .chroma .s {
-  font-style: italic;
+  font-style: bold;
 }
 
 /* LiteralStringAffix */
@@ -193,26 +198,31 @@
 /* Comment */
 .chroma .c {
   font-style: italic;
+  color: var(--content-secondary);
 }
 
 /* CommentHashbang */
 .chroma .ch {
   font-style: italic;
+  color: var(--content-secondary);
 }
 
 /* CommentMultiline */
 .chroma .cm {
   font-style: italic;
+  color: var(--content-secondary);
 }
 
 /* CommentSingle */
 .chroma .c1 {
   font-style: italic;
+  color: var(--content-secondary);
 }
 
 /* CommentSpecial */
 .chroma .cs {
   font-style: italic;
+  color: var(--content-secondary);
 }
 
 /* GenericEmph */
