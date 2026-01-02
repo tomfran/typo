@@ -70,9 +70,16 @@ I strongly recommend enabling breadcrumbs if you do so.
 ## Note on Syntax Highlighting
 
 The theme supports syntax highlighting.
-By default, it uses a slightly modified version of the `algol` theme, defined in `assets/css/syntax-highlighting.css`.
+By default, it uses a slightly modified version of the `algol_nu` theme, defined in `assets/css/syntax-highlighting.css`.
+To enable syntax highlighting, add the following to your `hugo.toml`:
+
+```toml
+[markup]
+[markup.highlight]
+noClasses = false
+```
+
 The code block background can be changed with the `--code-background-light` and `--code-background-dark` variables in [`custom.css`]({{% relref "advanced-customization.md#custom-css" %}}) or in a [custom color file](#adding-a-custom-color-palette).
-To use a custom color scheme, you can overwrite this file.
 Other color schemes, e.g. Monokai, can be applied using [inline styles]: 
 
 ```toml
@@ -82,10 +89,10 @@ noClasses = true
 style = 'monokai'
 ```
 
-Alternatively, you can generate a stylesheet for your preferred color scheme with this command:
+Alternatively, you can overwrite the stylesheet with your preferred color scheme using this command:
 
 ```shell
-hugo gen chromastyles --style monokai > assets/css/syntax-highlighting.css    
+hugo gen chromastyles --style monokai > assets/css/syntax-highlighting.css
 ```
 
 I suggest trying [color schemes](https://xyproto.github.io/splash/docs/all.html) and see what can work for you.
