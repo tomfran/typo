@@ -67,10 +67,12 @@ hideHeader = true
 
 I strongly recommend enabling breadcrumbs if you do so.
 
-## Note on Syntax Highlighting
+## Code Blocks
+
+**Syntax Highlighting**
 
 The theme supports syntax highlighting.
-By default, it uses a slightly modified version of the `algol_nu` theme, defined in `assets/css/syntax-highlighting.css`.
+By default, it uses a slightly modified version of the `bw` theme, defined in `assets/css/syntax-highlighting.css`.
 To enable syntax highlighting, add the following to your `hugo.toml`:
 
 ```toml
@@ -96,6 +98,17 @@ hugo gen chromastyles --style monokai > assets/css/syntax-highlighting.css
 ```
 
 I suggest trying [color schemes](https://xyproto.github.io/splash/docs/all.html) and see what can work for you.
+
+**Line Numbers**
+
+If you want to enable line numbers, use the following, `lineNumbersInTable` is expecially important. 
+
+```toml
+[markup]
+[markup.highlight]
+lineNos = true
+lineNumbersInTable = false
+```
 
 ## Footer Customization
 
