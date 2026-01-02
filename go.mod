@@ -1,3 +1,3 @@
-module github.com/tomfran/typo/v2
+module github.com/tomfran/typo/v3
 
 go 1.20
