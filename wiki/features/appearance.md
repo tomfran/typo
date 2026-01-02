@@ -69,19 +69,31 @@ I strongly recommend enabling breadcrumbs if you do so.
 
 ## Note on Syntax Highlighting
 
-The theme supports syntax highlighting, and you can specify the theme as follows: 
+The theme supports syntax highlighting.
+By default, it uses a slightly modified version of the `algol_nu` theme, defined in `assets/css/syntax-highlighting.css`.
+To enable syntax highlighting, add the following to your `hugo.toml`:
 
 ```toml
 [markup]
 [markup.highlight]
-style = 'algol'
+noClasses = false
 ```
 
-`algol` is the recommended theme, and for it to work, the background-color of the code 
-elements is enforced.
-This has the side effect of breaking other color schemes, e.g. Monokai. 
+The code block background can be changed with the `--code-background-light` and `--code-background-dark` variables in [`custom.css`]({{% relref "advanced-customization.md#custom-css" %}}) or in a [custom color file](#adding-a-custom-color-palette).
+Other color schemes, e.g. Monokai, can be applied using [inline styles]: 
 
-You can make them work by removing `!important` from the background color of the code pre elements.
+```toml
+[markup]
+[markup.highlight]
+noClasses = true
+style = 'monokai'
+```
+
+Alternatively, you can overwrite the stylesheet with your preferred color scheme using this command:
+
+```shell
+hugo gen chromastyles --style monokai > assets/css/syntax-highlighting.css
+```
 
 I suggest trying [color schemes](https://xyproto.github.io/splash/docs/all.html) and see what can work for you.
 
@@ -95,3 +107,5 @@ Note that if you don't include the following parameters (or leave footerContent 
 showFooter = true
 footerContent = "Your **custom** md `footer`"
 ```
+
+[inline styles]: https://neohugo.github.io/content-management/syntax-highlighting/#noclasses
