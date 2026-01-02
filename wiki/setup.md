@@ -101,8 +101,7 @@ hideHeader = false
 # Intro on main page, content is markdown
 homeIntroTitle = 'Hi!'
 homeIntroContent = """
-I am an Italian Software Engineer with a strong foundation in computer science and a passion for solving complex problems.
-I am interested in a range of topics, including algorithms, distributed systems, databases, and information retrieval.
+My very long home intro
 """
 
 # Collection to display on home
@@ -149,7 +148,7 @@ url = "/about"
 # Syntax highlight on code blocks
 [markup]
 [markup.highlight]
-style = 'algol'
+noClasses = false
 
 # Giscus comments
 [params.giscus]
