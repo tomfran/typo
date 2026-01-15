@@ -36,13 +36,11 @@ git submodule update --init --recursive
 
 **Hugo module**
 
-Installing Typo as a Hugo module requires Go to be installed in your development environment.
+Installing Typo as a [Hugo module](https://gohugo.io/hugo-modules/use-modules/) requires Go to be installed in your development environment.
 
 ```bash
 # Initialize your project as a Hugo module
 hugo mod init <module_name>
-# Install the theme
-hugo mod get github.com/tomfran/typo
 ```
 
 Then add the following to `hugo.toml`:
@@ -50,10 +48,11 @@ Then add the following to `hugo.toml`:
 ```toml
 [module]
 [[module.imports]]
-path = "github.com/tomfran/typo"
+path = "github.com/tomfran/typo/v3"
 ```
 
 Finally, remove the `theme = 'typo'` parameter from `hugo.toml`.
+When building the site, Hugo will automatically download the required modules.
 
 **Cloning**
 
