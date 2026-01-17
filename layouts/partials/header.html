@@ -14,10 +14,11 @@
         {{ with site.Params.menu }}
         {{ range . }}
 
-        <p
-            class="small {{ if eq (lower .name) (lower $currentPage.LinkTitle) }} bold {{end}}">
-            <a href="{{ .url }}" {{ if and (isset . "newTab") .newTab
-                }}target="_blank" rel="noopener noreferrer" {{ end }}>
+        {{ $isCurrentPage := eq (lower .name) (lower $currentPage.LinkTitle) }}
+
+        <p class="small {{ if $isCurrentPage }} bold {{end}}">
+            <a href="{{ .url }}" {{ if and (isset . "newTab" ) .newTab }}target="_blank" rel="noopener noreferrer" {{
+                end }} {{ if $isCurrentPage }}aria-current="page"{{ end }}>
                 /{{.name }}
             </a>
         </p>
