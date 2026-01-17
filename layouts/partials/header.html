@@ -8,14 +8,14 @@
         <a href="{{ site.BaseURL }}">{{ site.Title }}</a>
     </h1>
 
-    <div class="header-menu">
+    <nav class="header-menu">
         {{ $currentPage := . }}
 
         {{ with site.Params.menu }}
         {{ range . }}
 
         <p
-            class="small {{ if eq .name (lower $currentPage.Name) }} bold {{end}}">
+            class="small {{ if eq (lower .name) (lower $currentPage.LinkTitle) }} bold {{end}}">
             <a href="{{ .url }}" {{ if and (isset . "newTab") .newTab
                 }}target="_blank" rel="noopener noreferrer" {{ end }}>
                 /{{.name }}
@@ -23,7 +23,7 @@
         </p>
         {{ end }}
         {{ end }}
-    </div>
+    </nav>
 
     {{ end }}
 
