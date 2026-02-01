@@ -25,3 +25,4 @@
 - [tawandamunongo.dev](https://tawandamunongo.dev), **Tawanda Munongo**, Software Engineer
 - [foliocassianico.com.br](https://www.foliocassianico.com.br/), **Cássio Gabriel**, Cloud Engineer
 - [amirhossein-z.github.io](https://amirhossein-z.github.io/), **Amirhossein Zareian**, Software Engineer
+- [m-d.me](https://m-d.me), **Maxim Dubinin**, Explorer
