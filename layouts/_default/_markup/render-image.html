@@ -47,16 +47,14 @@ and build the img class string as "img-tag1 img-tag2 ..."
 <figure class="{{ $classes }}">
 
     {{ $text := .Text }}
-    {{ with $imgResource }}
-      {{ if eq $imgResource.MediaType.SubType "svg" }}
-        <div class="img-container">
-            <img loading="lazy" alt="{{ $text }}" src="{{ $url }}">
-        </div>
-      {{ else }}
-        <div class="img-container" style="--w: {{ .Width }}; --h: {{ .Height }};">
-            <img loading="lazy" alt="{{ $text }}" src="{{ $url }}" width="{{ .Width }}" height="{{ .Height }}">
-        </div>
-      {{ end }}
+    {{ if and $imgResource (ne $imgResource.MediaType.SubType "svg") }}
+      <div class="img-container" style="--w: {{ $imgResource.Width }}; --h: {{ $imgResource.Height }};">
+        <img loading="lazy" alt="{{ $text }}" src="{{ $url }}" width="{{ $imgResource.Width }}" height="{{ $imgResource.Height }}">
+      </div>
+    {{ else }}
+      <div class="img-container">
+        <img loading="lazy" alt="{{ $text }}" src="{{ $url }}">
+      </div>
     {{ end }}
 
     {{ with .Title }}
@@ -65,3 +63,4 @@ and build the img class string as "img-tag1 img-tag2 ..."
     </div>
     {{ end }}
 </figure>
+
