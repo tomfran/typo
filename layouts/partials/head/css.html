@@ -23,4 +23,4 @@ $combined := $CSS
 | fingerprint
 }}
 
-<link rel="stylesheet" href="{{ $combined.RelPermalink }}" media="all">
+<link rel="stylesheet" href="{{ $combined.RelPermalink }}" integrity="{{ $combined.Data.Integrity }}" media="all">
