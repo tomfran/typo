@@ -1,7 +1,7 @@
 ---
 title: "Setup"
 date: "2024-10-12"
-summary: "How to setup a Hugo's website using Typo as a theme."
+summary: "How to set up a Hugo website using Typo as a theme."
 description: "Getting started with Typo theme"
 toc: false
 readTime: false
