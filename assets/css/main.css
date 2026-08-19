@@ -502,7 +502,7 @@ figure {
   .img-container {
     aspect-ratio: var(--w) / var(--h);
     max-height: var(--figure-img-max-height);
-    width: auto;
+    width: fit-content;
     margin-inline: auto;
   }
 
@@ -550,6 +550,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: auto;
 }
 
 .img-full img {

@@ -78,7 +78,7 @@ Here is a sample `hugo.toml` config to get started with the theme.
 
 ```toml
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'My website'
 theme = 'typo'
 
