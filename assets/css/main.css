@@ -815,13 +815,17 @@ blockquote p {
   }
 
   pre.mermaid {
+    display: flex;
+    justify-content: center;
     background: transparent;
     border: none;
     padding: 0;
-    text-align: center;
+    overflow: visible;
+    white-space: normal;
   }
 
   pre.mermaid svg {
+    display: block;
     max-width: 100% !important;
     height: auto !important;
   }
