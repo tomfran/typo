@@ -666,3 +666,246 @@ blockquote p {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
+/* Print */
+
+@media print {
+  @page {
+    margin: 20mm;
+  }
+
+  body {
+    font-size: 10.5pt;
+    line-height: 1.5;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    color: #111;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .content {
+    min-height: auto !important;
+  }
+
+  .main {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 20pt;
+    line-height: 1.2;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .header-title,
+  .single-title {
+    margin-top: 0;
+  }
+
+  .header-title {
+    font-size: 15pt;
+    margin-bottom: 0.5rem;
+  }
+
+  .header-title a {
+    text-decoration: none;
+  }
+
+  h2 {
+    font-size: 14pt;
+    line-height: 1.25;
+    margin-top: 1.2rem;
+    margin-bottom: 0.45rem;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 12pt;
+    line-height: 1.3;
+    margin-top: 1rem;
+    margin-bottom: 0.35rem;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 11pt;
+    line-height: 1.3;
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  p,
+  li {
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+
+  p {
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .single-intro-container {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+  }
+
+  .single-summary {
+    font-size: 10.5pt;
+    margin-bottom: 0.6rem;
+  }
+
+  .single-subsummary {
+    font-size: 9.5pt;
+    margin-top: 0.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .toc {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .toc a {
+    text-decoration: none;
+  }
+
+  pre,
+  code {
+    font-family: var(--font-mono);
+    font-size: 9pt;
+  }
+
+  li code,
+  table code,
+  p code {
+    background-color: #f2f2f2;
+    padding: 1px 3px;
+    border-radius: 3px;
+  }
+
+  pre {
+    padding: 0.65rem 0.85rem;
+    margin: 0.8rem 0;
+    line-height: 1.35;
+    border: 1px solid #ccc;
+    background: #f8f9fa;
+    white-space: pre-wrap;
+    word-break: break-word;
+    border-radius: 4px;
+    overflow: visible;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  pre.mermaid {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    overflow: visible;
+    white-space: normal;
+  }
+
+  pre.mermaid svg {
+    display: block;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  pre.mermaid p {
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .table-outer {
+    overflow: visible;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9pt;
+    margin: 0.8rem 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  th,
+  td {
+    padding: 4pt 6pt;
+    border: 1px solid #ccc;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+  blockquote {
+    margin: 0.8rem 0;
+    padding: 0.4rem 0 0.4rem 0.9rem;
+    border-left: 2.5pt solid #333;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  figure,
+  img {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .img-dark {
+    display: none !important;
+  }
+
+  .img-light {
+    display: block !important;
+  }
+
+  .katex-display {
+    overflow: visible;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: #111;
+    text-decoration: underline;
+  }
+
+  .header-menu,
+  .breadcrumbs,
+  .copy-code-button,
+  .anchor,
+  .single-tags,
+  .single-pagination,
+  .pagination,
+  .social-icons,
+  .back-to-top,
+  .giscus,
+  footer {
+    display: none !important;
+  }
+}
