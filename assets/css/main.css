@@ -814,6 +814,24 @@ blockquote p {
     page-break-inside: avoid;
   }
 
+  pre.mermaid {
+    background: transparent;
+    border: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  pre.mermaid svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  pre.mermaid p {
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
   .table-outer {
     overflow: visible;
   }
